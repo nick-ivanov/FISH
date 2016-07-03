@@ -6,4 +6,3 @@ This file consists of a list of features and fixes to be done. Please put your n
 - Research the possibility of translating it into C
 - Create a new branch for C translation
 - Try non-unit testing
-- Fix syntax errors
