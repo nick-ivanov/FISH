@@ -4,7 +4,7 @@ VERSION:       1.0
 DESCRIPTION:   Fantasticly Incredible Shell (FISH) -- a Unux command
                      interpreter.
 
-AUTHOR:        Nick Ivanov (Nick) <nick@nnbits.org>
+AUTHOR:        Nick Ivanov (Nick) <nnrowan@gmail.com>
                 
 LICENSE:       GNU General Public License v.3
                [http://www.gnu.org/licenses/gpl-3.0.en.html]
