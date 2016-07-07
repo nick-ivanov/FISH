@@ -416,11 +416,11 @@ int main()
 				continue;
 			}
 
-			ifstream f1(A[1]);
-			if(!f1) {
-				cerr << "FISH: File " << f1 << " does not exist or cannot be copied." << endl;
-				continue;
-			}
+//			ifstream f1(A[1]);
+//			if(!f1) {
+//				cerr << "FISH: File " << f1 << " does not exist or cannot be copied." << endl;
+//				continue;
+//			}
 
 			// Allow to copy to a directory
 			struct stat st;
@@ -452,12 +452,12 @@ int main()
 				}
 			}
 
-			ofstream f2(A[2]);
-			if(!f2) {
-				cerr << "FISH: Cannot copy." << endl;
-				f1.close();
-				continue;
-			}
+//			ofstream f2(A[2]);
+//			if(!f2) {
+//				cerr << "FISH: Cannot copy." << endl;
+//				f1.close();
+//				continue;
+//			}
 
 			char ch;
 			long int i = 0;
