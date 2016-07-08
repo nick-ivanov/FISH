@@ -16,7 +16,7 @@ DOCUMENTATION: Build and run the program; then type HELP to
                      ><(((*> HELP
 */
 
-//#include <iostream>
+#include <iostream>
 #include <fstream>
 #include <string>
 #include <cstdlib>
