@@ -1,9 +1,7 @@
 /*
-FILE NAME:     fish2.cpp
+FILE NAME:     fish.c
 VERSION:       1.0
-DESCRIPTION:   Fantasticly Incredible Shell (FISH) -- a Unux command
-                     interpreter proudly designed and implemented at
-                     SMSU.
+DESCRIPTION:   Fantasticly Incredible Shell (FISH) -- pretty good Unux shell.
 AUTHOR:        Nikolay Ivanov (Nick) <nnrowan@gmail.com>
 LICENSE:       GNU General Public License v.3
                [http://www.gnu.org/licenses/gpl-3.0.en.html]
