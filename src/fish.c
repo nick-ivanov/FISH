@@ -9,23 +9,19 @@ DATE:          12/09/2015
 
 DOCUMENTATION: Build and run the program; then type HELP to
                      to see the list of commands:
-                     $ g++ -o fish2 fish2.cpp
-                     $ ./fish2
+                     $ gcc -o fish fish.c
+                     $ ./fish
                      ><(((*> HELP
 */
 
-#include <iostream>
-#include <fstream>
-#include <string>
-#include <cstdlib>
-#include <cstring>
+#include <string.h>
+#include <stdlib.h>
 #include <unistd.h>
 #include <dirent.h>
 #include <sys/dir.h>
 #include <sys/types.h>
 #include <sys/stat.h>
 #include <sys/wait.h>
-using namespace std;
 
 #define FISH_MAX_CMD_WORDS	64		// Maximum number of words in a command
 #define FISH_MAX_WORD_LEN	256		// Maximum length of a word
