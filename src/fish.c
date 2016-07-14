@@ -62,7 +62,8 @@ void parse(char** A, int& n)
 	bool begin_flag = true;	// We have not encountered any words yet;
 
 	do {
-		ch = cin.get();
+		//ch = cin.get();
+		ch = getchar();
 
 		// Space could be leading, trailing, or between words
 		if(ch == ' ') {
@@ -70,12 +71,12 @@ void parse(char** A, int& n)
 
 			if(n >= FISH_MAX_CMD_WORDS) { // Too many words
 				n = -1;		// Save error status
-				do { ch = cin.get(); } while (ch != '\n'); // Flush drop by drop
+				do { ch = getchar(); } while (ch != '\n'); // Flush drop by drop
 				return;		// Get out of here completely
 			}
 
 			do {	// Skip a series of spaces
-				ch = cin.get();
+				ch = getchar();
 				if(ch == '\n') { return; }	// It was a trailing space
 			} while (ch == ' ');	// Is it still a space?
 
@@ -91,7 +92,7 @@ void parse(char** A, int& n)
 
 		if(i >= FISH_MAX_WORD_LEN) { // One of the words is too long
 			n = -2;	// Save error status
-			do { ch = cin.get(); } while (ch != '\n'); // Flush drop by drop
+			do { ch = getchar(); } while (ch != '\n'); // Flush drop by drop
 			return;	// Get out of here completely
 		}
 		
