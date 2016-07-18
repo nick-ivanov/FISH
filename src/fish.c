@@ -113,12 +113,13 @@ int main()
 
 	char **A = (char **) malloc (FISH_MAX_CMD_WORDS * sizeof(char *));
 
-	if(!A) {
-		cerr << "System error. Nobody's fault. Try again." << endl;
+	if(A == null) {
+		fprintf(stderr, "System error. Nobody's fault. Try again.\n");
 		exit(1);
 	}
 
-	for(int i = 0; i < FISH_MAX_CMD_WORDS; i++) {
+	int i = 0;
+	for(i = 0; i < FISH_MAX_CMD_WORDS; i++) {
 		A[i] = new char[FISH_MAX_WORD_LEN+1]; // Why +1? Because of null-terminators!
 		if(!A[i]) {
 			cerr << "System error. Nobody's fault. Try again." << endl;
