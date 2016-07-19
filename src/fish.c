@@ -120,7 +120,10 @@ int main()
 
 	int i = 0;
 	for(i = 0; i < FISH_MAX_CMD_WORDS; i++) {
-		A[i] = new char[FISH_MAX_WORD_LEN+1]; // Why +1? Because of null-terminators!
+		//A[i] = new char[FISH_MAX_WORD_LEN+1]; // Why +1? Because of null-terminators!
+
+		A[i] = (char *) malloc ((FISH_MAX_WORD_LEN+1) * sizeof(char));
+
 		if(!A[i]) {
 			cerr << "System error. Nobody's fault. Try again." << endl;
 			exit(1);
