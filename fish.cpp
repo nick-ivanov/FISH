@@ -111,7 +111,7 @@ void parse(char** A, int& n)
 int main()
 {
 	int n;
-	// Create a dynamic array, and allocate the memory
+	// Create a dynamic array and allocate the memory
 	char** A = new char*[FISH_MAX_CMD_WORDS];
 	if(!A) {
 		cerr << "System error. Nobody's fault. Try again." << endl;
