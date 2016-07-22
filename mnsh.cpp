@@ -1,7 +1,7 @@
 /*
-FILE NAME:     fish.cpp
+FILE NAME:     mnsh.cpp
 VERSION:       0.2
-DESCRIPTION:   Fantasticly Incredible Shell (FISH) -- a Unux command
+DESCRIPTION:   Minnesota Shell (MNSH) -- a Unux command
                interpreter demonstating the basics of Unix programming.
 AUTHOR:        Nick Ivanov <nnrowan@gmail.com>
 LICENSE:       GNU General Public License v.3
@@ -10,9 +10,9 @@ DATE:          1/8/2016
 
 DOCUMENTATION: Build and run the program; then type HELP to
                      to see the list of commands:
-                     $ g++ -o fish fish.cpp
-                     $ ./fish
-                     ><(((*> HELP
+                     $ g++ -o mnsh mnsh.cpp
+                     $ ./mnsh
+                     mnsh> HELP
 */
 
 #include <iostream>
@@ -28,8 +28,8 @@ DOCUMENTATION: Build and run the program; then type HELP to
 #include <sys/wait.h>
 using namespace std;
 
-#define FISH_MAX_CMD_WORDS	64		// Maximum number of words in a command
-#define FISH_MAX_WORD_LEN	256		// Maximum length of a word
+#define MNSH_MAX_CMD_WORDS	64		// Maximum number of words in a command
+#define MNSH_MAX_WORD_LEN	256		// Maximum length of a word
 
 /* This function converts capital letter in ARGV[index] into lower case.
 This function is used for support of case-insensitive commands, as well
@@ -72,7 +72,7 @@ void parse(char** A, int& n)
 		if(ch == ' ') {
 			if(!begin_flag) { n++; }	// This space is leading. It is not yet another word.
 
-			if(n >= FISH_MAX_CMD_WORDS) { // Too many words
+			if(n >= MNSH_MAX_CMD_WORDS) { // Too many words
 				n = -1;		// Save error status
 				do { ch = cin.get(); } while (ch != '\n'); // Flush drop by drop
 				return;		// Get out of here completely
@@ -93,7 +93,7 @@ void parse(char** A, int& n)
 
 		begin_flag = false;// So we are no longer reading a series of leading spaces
 
-		if(i >= FISH_MAX_WORD_LEN) { // One of the words is too long
+		if(i >= MNSH_MAX_WORD_LEN) { // One of the words is too long
 			n = -2;	// Save error status
 			do { ch = cin.get(); } while (ch != '\n'); // Flush drop by drop
 			return;	// Get out of here completely
@@ -112,14 +112,14 @@ int main()
 {
 	int n;
 	// Create a dynamic array and allocate the memory
-	char** A = new char*[FISH_MAX_CMD_WORDS];
+	char** A = new char*[MNSH_MAX_CMD_WORDS];
 	if(!A) {
 		cerr << "System error. Nobody's fault. Try again." << endl;
 		exit(1);
 	}
 
-	for(int i = 0; i < FISH_MAX_CMD_WORDS; i++) {
-		A[i] = new char[FISH_MAX_WORD_LEN+1]; // Why +1? Because of null-terminators!
+	for(int i = 0; i < MNSH_MAX_CMD_WORDS; i++) {
+		A[i] = new char[MNSH_MAX_WORD_LEN+1]; // Why +1? Because of null-terminators!
 		if(!A[i]) {
 			cerr << "System error. Nobody's fault. Try again." << endl;
 			exit(1);
@@ -127,19 +127,19 @@ int main()
 	}
 	
 	while(true) {
-		cout << "[" << getcwd(NULL, 64) << "] " << "><(((*> ";	// Command line prompt. Yes, it's a fish!
-		for(int i = 0; i < FISH_MAX_CMD_WORDS; i++) { A[i][0] = '\0'; } // Clean the array, just in case
+		cout << "[" << getcwd(NULL, 64) << "] " << "mnsh> ";
+		for(int i = 0; i < MNSH_MAX_CMD_WORDS; i++) { A[i][0] = '\0'; } // Clean the array, just in case
 		n = 0;
 		parse(A, n);
 
 		if(n == -1) {	// Check the boundaries
-			cerr << "FISH ERROR: The number of words cannot exceed "
-				<< FISH_MAX_CMD_WORDS << "." << endl;
+			cerr << "MNSH ERROR: The number of words cannot exceed "
+				<< MNSH_MAX_CMD_WORDS << "." << endl;
 			continue;
 		}
 
 		if(n == -2) {	// Check the boundaries
-			cerr << "FISH ERROR: A word cannot be longer than " << FISH_MAX_WORD_LEN 
+			cerr << "MNSH ERROR: A word cannot be longer than " << MNSH_MAX_WORD_LEN
 				<< " characters." << endl;
 			continue;
 		}
@@ -148,7 +148,7 @@ int main()
 
 		if(!strcmp(A[0], "quit")) {
 			if(n > 1) {
-				cerr << "FISH SYNTAX ERROR: QUIT does not take any arguments." << endl;
+				cerr << "MNSH SYNTAX ERROR: QUIT does not take any arguments." << endl;
 				continue;	
 			}
 
@@ -159,18 +159,18 @@ int main()
 
 		if(!strcmp(A[0], "help")) {
 			if(n > 2) {
-				cerr << "FISH SYNTAX ERROR: HELP takes one or no arguments." << endl;
+				cerr << "MNSH SYNTAX ERROR: HELP takes one or no arguments." << endl;
 				continue;	
 			}
 
 			if(n == 1) {
-				cout << "*** FISH ver. 0.2 -- Fantastically Incredible SHell ***" << endl << endl;
-				cout << "FISH is a UNIX command interpreter proudly designed" << endl;
+				cout << "*** MNSH ver. 0.2 -- Minnesota Shell ***" << endl << endl;
+				cout << "MNSH is a UNIX command interpreter proudly designed" << endl;
 				cout << "and implemented in Minnesota. Here is the list of commands" << endl;
-				cout << "supported by FISH:" << endl << endl;
+				cout << "supported by MNSH:" << endl << endl;
 				cout << "RUN, LAUNCH, LIST, COPY, REMOVE, CD, SHOW, HELP, QUIT, MKDIR, RMDIR" << endl << endl;
 				cout << "To get help on each of those commands, type HELP <command> (i.e. HELP CD)" << endl;
-				cout << "NOTE that FISH commands are case-insensitive, yet all the arguments" << endl;
+				cout << "NOTE that MNSH commands are case-insensitive, yet all the arguments" << endl;
 				cout << "are case-sensitive (except for HELP whose argument is case-insensitive)." << endl;
 				continue;
 			}
@@ -245,17 +245,17 @@ int main()
 			}
 
 			if(!strcmp(A[1], "help")) {
-				cout << "HELP prints documentation on FISH commands and user behavior." << endl;
+				cout << "HELP prints documentation on MNSH commands and user behavior." << endl;
 				cout << "An optional argument specifies a particular command to get help on." << endl;
 				cout << "FORMAT:" << endl;
-				cout << "\tHELP [<fish-command>]" << endl;
+				cout << "\tHELP [<mnsh-command>]" << endl;
 				cout << "EXAMPLE:" << endl;
 				cout << "\tHELP SHOW" << endl;
 				continue;
 			}
 
 			if(!strcmp(A[1], "quit")) {
-				cout << "QUIT exits FISH command interpreter." << endl;
+				cout << "QUIT exits MNSH command interpreter." << endl;
 				cout << "FORMAT:" << endl;
 				cout << "\tQUIT" << endl;
 				continue;
@@ -279,20 +279,20 @@ int main()
 				continue;
 			}
 
-			cerr << "FISH does not have command '" << A[1] << "'" << endl;
+			cerr << "MNSH does not have command '" << A[1] << "'" << endl;
 			continue;
 		}
 
 		if(!strcmp(A[0], "run")) {
 			if(n < 2 || n > 10) {
-				cerr << "FISH SYNTAX ERROR: Command RUN takes one to nine arguments." << endl;
+				cerr << "MNSH SYNTAX ERROR: Command RUN takes one to nine arguments." << endl;
 				continue;
 			}
 
 			pid_t pid = fork();
 
 			if(pid == -1) {
-				perror("FISH internal error.");
+				perror("MNSH internal error.");
 				continue;
 			} else if (pid == 0) {
 				switch(n) // Yes it looks gloomy, but it is easier than using execv()!
@@ -308,11 +308,11 @@ int main()
 					case 10: execl(A[1], A[1], A[2], A[3], A[4], A[5], A[6], A[7], A[8], A[9], NULL); break;
 					
 					default:
-						cerr << "FISH SYNTAX ERROR: Command RUN takes one to eleven arguments." << endl;
+						cerr << "MNSH SYNTAX ERROR: Command RUN takes one to eleven arguments." << endl;
 						continue;
 				}
 
-				perror("FISH ERROR");
+				perror("MNSH ERROR");
 				exit(1);	// The child is still alive and kickin'.
 			} else {
 				wait(NULL);
@@ -323,14 +323,14 @@ int main()
 
 		if(!strcmp(A[0], "launch")) {
 			if(n < 2 || n > 10) {
-				cerr << "FISH SYNTAX ERROR: Command LAUNCH takes one to nine arguments." << endl;
+				cerr << "MNSH SYNTAX ERROR: Command LAUNCH takes one to nine arguments." << endl;
 				continue;
 			}
 
 			pid_t pid = fork();
 
 			if(pid == -1) {
-				perror("FISH internal error.");
+				perror("MNSH internal error.");
 				continue;
 			} else if (pid == 0) {
 				switch(n) // Yes it looks gloomy, but it is easier than using execvp()!
@@ -346,11 +346,11 @@ int main()
 					case 10: execlp(A[1], A[1], A[2], A[3], A[4], A[5], A[6], A[7], A[8], A[9], NULL); break;
 					
 					default:
-						cerr << "FISH SYNTAX ERROR: Command LAUNCH takes one to eleven arguments." << endl;
+						cerr << "MNSH SYNTAX ERROR: Command LAUNCH takes one to eleven arguments." << endl;
 						continue;
 				}
 
-				perror("FISH ERROR");
+				perror("MNSH ERROR");
 				exit(1);	// The child is still alive and kickin'.
 			} else {
 				wait(NULL);
@@ -365,7 +365,7 @@ int main()
 
 			dir = opendir(getcwd(NULL, 256));
 			if(dir == NULL) {
-				perror("FISH ERROR");
+				perror("MNSH ERROR");
 				closedir(dir);
 				continue;
 			}
@@ -387,7 +387,7 @@ int main()
 
 			dir = opendir(A[1]);
 			if(dir == NULL) {
-				perror("FISH ERROR");
+				perror("MNSH ERROR");
 				closedir(dir);
 				continue;
 			}
@@ -404,13 +404,13 @@ int main()
 		}
 
 		if(!strcmp(A[0], "list") && n > 2) {
-			cerr << "FISH SYNTAX ERROR: LIST can only take one or no arguments." << endl;
+			cerr << "MNSH SYNTAX ERROR: LIST can only take one or no arguments." << endl;
 			continue;
 		}
 
 		if(!strcmp(A[0], "copy")) {
 			if(n != 3) {
-				cerr << "FISH SYNTAX ERROR: COPY can take only two arguments." << endl;
+				cerr << "MNSH SYNTAX ERROR: COPY can take only two arguments." << endl;
 				continue;
 			}
 
@@ -419,7 +419,7 @@ int main()
 
 
 			if(!f1) {
-				cerr << "FISH: File " << A[1] << " does not exist or cannot be copied." << endl;
+				cerr << "MNSH: File " << A[1] << " does not exist or cannot be copied." << endl;
 				continue;
 			}
 
@@ -437,14 +437,14 @@ int main()
 						j++;
 
 						// Doing so, remember about sizes
-						if(i == FISH_MAX_WORD_LEN) {	// This is where the infamous GOTO is handy
+						if(i == MNSH_MAX_WORD_LEN) {	// This is where the infamous GOTO is handy
 							cerr << "FISH ERROR: File name is too long." << endl;
 							break;
 						}
 					}
 
 					// Without GOTO, we have to check the same condition twice. Not a big problem though :)
-					if(i == FISH_MAX_WORD_LEN) {
+					if(i == MNSH_MAX_WORD_LEN) {
 						cerr << "FISH ERROR: File name is too long." << endl;
 						continue;
 					}
@@ -456,7 +456,7 @@ int main()
 			fstream f2(A[2]);
 			//ofstream f2(A[2]);
 			if(!f2) {
-				cerr << "FISH: Cannot copy." << endl;
+				cerr << "MNSH: Cannot copy." << endl;
 				f1.close();
 				continue;
 			}
@@ -481,12 +481,12 @@ int main()
 
 		if(!strcmp(A[0], "remove")) {
 			if(n != 2) {
-				cerr << "FISH ERROR: REMOVE command requires one argument." << endl;
+				cerr << "MNSH ERROR: REMOVE command requires one argument." << endl;
 				continue;
 			}
 
 			if(unlink(A[1]) == -1) {
-				cerr << "FISH ERROR: File " << A[1] << " cannot be removed." << endl;
+				cerr << "MNSH ERROR: File " << A[1] << " cannot be removed." << endl;
 			} else {
 				cerr << "R.I.P., " << A[1] << endl;
 			}
@@ -495,7 +495,7 @@ int main()
 
 		if(!strcmp(A[0], "cd")) {
 			if(n > 2) {
-				cerr << "FISH ERROR: REMOVE command requires one or no argument." << endl;
+				cerr << "MNSH ERROR: REMOVE command requires one or no argument." << endl;
 				continue;
 			}
 
@@ -504,7 +504,7 @@ int main()
 			}
 
 			if(chdir(A[1]) == -1) {
-				cerr << "FISH ERROR: Cannot change directory." << endl;
+				cerr << "MNSH ERROR: Cannot change directory." << endl;
 			}
 
 			continue;
@@ -512,14 +512,14 @@ int main()
 
 		if(!strcmp(A[0], "show")) {
 			if(n != 2) {
-				cerr << "FISH SYNTAX ERROR: SHOW command requires one argument." << endl;
+				cerr << "MNSH SYNTAX ERROR: SHOW command requires one argument." << endl;
 				continue;
 			}
 
             fstream f(A[1]);
 			//ifstream f(A[1]);
 			if(!f) {
-				cerr << "FISH ERROR: Cannot open file " << A[1] << endl;
+				cerr << "MNSH ERROR: Cannot open file " << A[1] << endl;
 				continue;
 			}
 
@@ -535,12 +535,12 @@ int main()
 
 		if(!strcmp(A[0], "mkdir")) {
 			if(n != 2) {
-				cerr << "FISH SYNTAX ERROR: MKDIR takes one argument." << endl;
+				cerr << "MNSH SYNTAX ERROR: MKDIR takes one argument." << endl;
 				continue;
 			}
 
 			if(mkdir(A[1], 0755) == -1) {
-				cerr << "FISH ERROR: Cannot create a directory." << endl;
+				cerr << "MNSH ERROR: Cannot create a directory." << endl;
 			} else {
 				cout << "Welcome on board, " << A[1] << "!" << endl;
 			}
@@ -550,12 +550,12 @@ int main()
 
 		if(!strcmp(A[0], "rmdir")) {
 			if(n != 2) {
-				cerr << "FISH SYNTAX ERROR: RMDIR takes one argument." << endl;
+				cerr << "MNSH SYNTAX ERROR: RMDIR takes one argument." << endl;
 				continue;
 			}
 
 			if(rmdir(A[1]) == -1) {
-				cerr << "FISH ERROR: Cannot delete a directory." << endl;
+				cerr << "MNSH ERROR: Cannot delete a directory." << endl;
 			} else {
 				cerr << "R.I.P., " << A[1] << "/" << endl;
 			}
@@ -565,7 +565,7 @@ int main()
 
 		if(A[0][0] == '\0') { continue; }
 
-		cerr << "FISH SYNTAX ERROR: Command '" << A[0] << "' is not implemented. ";
+		cerr << "MNSH SYNTAX ERROR: Command '" << A[0] << "' is not implemented. ";
 		cerr << "Ask Nick to implement it." << endl;
 	}
 	
