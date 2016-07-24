@@ -1,18 +1,19 @@
 /*
-FILE NAME:     mnsh.cpp
-VERSION:       0.2
-DESCRIPTION:   Minnesota Shell (MNSH) -- a Unux command
-               interpreter demonstating the basics of Unix programming.
-AUTHOR:        Nick Ivanov <nnrowan@gmail.com>
-LICENSE:       GNU General Public License v.3
-               [http://www.gnu.org/licenses/gpl-3.0.en.html]
-DATE:          1/8/2016
+mnsh - Minnesota Shell: a cross-platform command interpreter
+Copyright (C) 2015-2016 Nick Ivanov <nnrowan@gmail.com>
 
-DOCUMENTATION: Build and run the program; then type HELP to
-                     to see the list of commands:
-                     $ g++ -o mnsh mnsh.cpp
-                     $ ./mnsh
-                     mnsh> HELP
+This program is free software: you can redistribute it and/or modify
+        it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+        but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 
 #include <iostream>
@@ -133,13 +134,13 @@ int main()
 		parse(A, n);
 
 		if(n == -1) {	// Check the boundaries
-			cerr << "MNSH ERROR: The number of words cannot exceed "
+			cerr << "mnsh ERROR: The number of words cannot exceed "
 				<< MNSH_MAX_CMD_WORDS << "." << endl;
 			continue;
 		}
 
 		if(n == -2) {	// Check the boundaries
-			cerr << "MNSH ERROR: A word cannot be longer than " << MNSH_MAX_WORD_LEN
+			cerr << "mnsh ERROR: A word cannot be longer than " << MNSH_MAX_WORD_LEN
 				<< " characters." << endl;
 			continue;
 		}
@@ -148,23 +149,27 @@ int main()
 
 		if(!strcmp(A[0], "quit")) {
 			if(n > 1) {
-				cerr << "MNSH SYNTAX ERROR: QUIT does not take any arguments." << endl;
+				cerr << "mnsh SYNTAX ERROR: QUIT does not take any arguments." << endl;
 				continue;	
 			}
 
-			cout << "Thank you for using Fantastically Incredible Shell (FISH)!" << endl;
+			cout << "Thank you for using Minnesota Shell (mnsh)!" << endl;
 			cout << "Glub-glub!" << endl;
 			break;
 		}
 
 		if(!strcmp(A[0], "help")) {
 			if(n > 2) {
-				cerr << "MNSH SYNTAX ERROR: HELP takes one or no arguments." << endl;
+				cerr << "mnsh SYNTAX ERROR: HELP takes one or no arguments." << endl;
 				continue;	
 			}
 
 			if(n == 1) {
-				cout << "*** MNSH ver. 0.2 -- Minnesota Shell ***" << endl << endl;
+                cout << "mnsh  Copyright (C) 2015-2016 Nick Ivanov <nnrowan@gmail.com>" << endl;
+                cout << "This program comes with ABSOLUTELY NO WARRANTY; for details type `license'." << endl;
+                cout << "This is free software, and you are welcome to redistribute it" << endl;
+                cout << "under certain conditions; type `license' for details." << endl << endl;
+				cout << "*** mnsh ver. 0.2 -- Minnesota Shell ***" << endl << endl;
 				cout << "MNSH is a UNIX command interpreter proudly designed" << endl;
 				cout << "and implemented in Minnesota. Here is the list of commands" << endl;
 				cout << "supported by MNSH:" << endl << endl;
@@ -438,14 +443,14 @@ int main()
 
 						// Doing so, remember about sizes
 						if(i == MNSH_MAX_WORD_LEN) {	// This is where the infamous GOTO is handy
-							cerr << "FISH ERROR: File name is too long." << endl;
+							cerr << "mnsh ERROR: File name is too long." << endl;
 							break;
 						}
 					}
 
 					// Without GOTO, we have to check the same condition twice. Not a big problem though :)
 					if(i == MNSH_MAX_WORD_LEN) {
-						cerr << "FISH ERROR: File name is too long." << endl;
+						cerr << "mnsh ERROR: File name is too long." << endl;
 						continue;
 					}
 
@@ -456,7 +461,7 @@ int main()
 			fstream f2(A[2]);
 			//ofstream f2(A[2]);
 			if(!f2) {
-				cerr << "MNSH: Cannot copy." << endl;
+				cerr << "mnsh: Cannot copy." << endl;
 				f1.close();
 				continue;
 			}
@@ -481,12 +486,12 @@ int main()
 
 		if(!strcmp(A[0], "remove")) {
 			if(n != 2) {
-				cerr << "MNSH ERROR: REMOVE command requires one argument." << endl;
+				cerr << "mnsh ERROR: REMOVE command requires one argument." << endl;
 				continue;
 			}
 
 			if(unlink(A[1]) == -1) {
-				cerr << "MNSH ERROR: File " << A[1] << " cannot be removed." << endl;
+				cerr << "mnsh ERROR: File " << A[1] << " cannot be removed." << endl;
 			} else {
 				cerr << "R.I.P., " << A[1] << endl;
 			}
@@ -495,7 +500,7 @@ int main()
 
 		if(!strcmp(A[0], "cd")) {
 			if(n > 2) {
-				cerr << "MNSH ERROR: REMOVE command requires one or no argument." << endl;
+				cerr << "mnsh ERROR: REMOVE command requires one or no argument." << endl;
 				continue;
 			}
 
@@ -504,7 +509,7 @@ int main()
 			}
 
 			if(chdir(A[1]) == -1) {
-				cerr << "MNSH ERROR: Cannot change directory." << endl;
+				cerr << "mnsh ERROR: Cannot change directory." << endl;
 			}
 
 			continue;
@@ -512,14 +517,14 @@ int main()
 
 		if(!strcmp(A[0], "show")) {
 			if(n != 2) {
-				cerr << "MNSH SYNTAX ERROR: SHOW command requires one argument." << endl;
+				cerr << "mnsh SYNTAX ERROR: SHOW command requires one argument." << endl;
 				continue;
 			}
 
             fstream f(A[1]);
 			//ifstream f(A[1]);
 			if(!f) {
-				cerr << "MNSH ERROR: Cannot open file " << A[1] << endl;
+				cerr << "mnsh ERROR: Cannot open file " << A[1] << endl;
 				continue;
 			}
 
@@ -535,12 +540,12 @@ int main()
 
 		if(!strcmp(A[0], "mkdir")) {
 			if(n != 2) {
-				cerr << "MNSH SYNTAX ERROR: MKDIR takes one argument." << endl;
+				cerr << "mnsh SYNTAX ERROR: MKDIR takes one argument." << endl;
 				continue;
 			}
 
 			if(mkdir(A[1], 0755) == -1) {
-				cerr << "MNSH ERROR: Cannot create a directory." << endl;
+				cerr << "mnsh ERROR: Cannot create a directory." << endl;
 			} else {
 				cout << "Welcome on board, " << A[1] << "!" << endl;
 			}
@@ -550,12 +555,12 @@ int main()
 
 		if(!strcmp(A[0], "rmdir")) {
 			if(n != 2) {
-				cerr << "MNSH SYNTAX ERROR: RMDIR takes one argument." << endl;
+				cerr << "mnsh SYNTAX ERROR: RMDIR takes one argument." << endl;
 				continue;
 			}
 
 			if(rmdir(A[1]) == -1) {
-				cerr << "MNSH ERROR: Cannot delete a directory." << endl;
+				cerr << "mnsh ERROR: Cannot delete a directory." << endl;
 			} else {
 				cerr << "R.I.P., " << A[1] << "/" << endl;
 			}
@@ -565,8 +570,7 @@ int main()
 
 		if(A[0][0] == '\0') { continue; }
 
-		cerr << "MNSH SYNTAX ERROR: Command '" << A[0] << "' is not implemented. ";
-		cerr << "Ask Nick to implement it." << endl;
+		cerr << "mnsh SYNTAX ERROR: Command '" << A[0] << "' is not implemented. ";
 	}
 	
 	// Now clean up the mess
