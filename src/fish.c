@@ -109,8 +109,6 @@ int main()
 {
 	int n;
 	// Create a dynamic array, and allocate the memory
-	//char** A = new char*[FISH_MAX_CMD_WORDS];
-
 	char **A = (char **) malloc (FISH_MAX_CMD_WORDS * sizeof(char *));
 
 	if(A == null) {
@@ -120,8 +118,8 @@ int main()
 
 	int i = 0;
 	for(i = 0; i < FISH_MAX_CMD_WORDS; i++) {
-		//A[i] = new char[FISH_MAX_WORD_LEN+1]; // Why +1? Because of null-terminators!
 
+		 // Why +1? Because of null-terminators!
 		A[i] = (char *) malloc ((FISH_MAX_WORD_LEN+1) * sizeof(char));
 
 		if(!A[i]) {
