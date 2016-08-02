@@ -123,13 +123,15 @@ int main()
 		A[i] = (char *) malloc ((FISH_MAX_WORD_LEN+1) * sizeof(char));
 
 		if(A[i] == null) {
-			cerr << "System error. Nobody's fault. Try again." << endl;
+			fprintf(stderr, "System error. Nobody's fault. Try again.");
 			exit(1);
 		}
 	}
 	
 	while(true) {
 		cout << "[" << getcwd(NULL, 64) << "] " << "><(((*> ";	// Command line prompt. Yes, it's a fish!
+		
+
 		for(int i = 0; i < FISH_MAX_CMD_WORDS; i++) { A[i][0] = '\0'; } // Clean the array, just in case
 		n = 0;
 		parse(A, n);
