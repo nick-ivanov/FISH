@@ -129,8 +129,7 @@ int main()
 	}
 	
 	while(true) {
-		cout << "[" << getcwd(NULL, 64) << "] " << "><(((*> ";	// Command line prompt. Yes, it's a fish!
-		
+		// Command line prompt. Yes, it's a fish!
 		printf("[%s] ><(((*> ", getcwd(NULL, 64));
 
 		for(int i = 0; i < FISH_MAX_CMD_WORDS; i++) { A[i][0] = '\0'; } // Clean the array, just in case
