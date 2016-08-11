@@ -122,7 +122,7 @@ int main()
 		 // Why +1? Because of null-terminators!
 		A[i] = (char *) malloc ((FISH_MAX_WORD_LEN+1) * sizeof(char));
 
-		if(A[i] == null) {
+		if(A[i] == NULL) {
 			fprintf(stderr, "System error. Nobody's fault. Try again.");
 			exit(1);
 		}
