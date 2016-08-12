@@ -132,9 +132,13 @@ int main()
 		// Command line prompt. Yes, it's a fish!
 		printf("[%s] ><(((*> ", getcwd(NULL, 64));
 
-		for(int i = 0; i < FISH_MAX_CMD_WORDS; i++) { A[i][0] = '\0'; } // Clean the array, just in case
+		// Clean the array, just in case
+		for(int i = 0; i < FISH_MAX_CMD_WORDS; i++) {
+			A[i][0] = '\0';
+		} 
+		
 		n = 0;
-		parse(A, n);
+		parse(A, n); // TODO: Fix pass by reference
 
 		if(n == -1) {	// Check the boundaries
 			cerr << "FISH ERROR: The number of words cannot exceed "
