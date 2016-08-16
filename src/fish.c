@@ -141,8 +141,8 @@ int main()
 		parse(A, n); // TODO: Fix pass by reference
 
 		if(n == -1) {	// Check the boundaries
-			cerr << "FISH ERROR: The number of words cannot exceed "
-				<< FISH_MAX_CMD_WORDS << "." << endl;
+			fprintf(stderr, "FISH ERROR: The number of words cannot exceed %d.\n",
+						FISH_MAX_CMD_WORDS);	
 			continue;
 		}
 
