@@ -147,8 +147,8 @@ int main()
 		}
 
 		if(n == -2) {	// Check the boundaries
-			cerr << "FISH ERROR: A word cannot be longer than " << FISH_MAX_WORD_LEN 
-				<< " characters." << endl;
+			fprintf(stderr, "FISH ERROR: A word cannot be longer than %d characters.\n",
+					FISH_MAX_WORD_LEN);	
 			continue;
 		}
 		
