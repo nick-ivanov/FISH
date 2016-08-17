@@ -152,7 +152,8 @@ int main()
 			continue;
 		}
 		
-		tolower_argvx(A, 0); // Make commands case insensitve. Arguments remain case-sensitive though.
+		// Make commands case insensitve. Arguments remain case-sensitive though.
+		tolower_argvx(A, 0);
 
 		if(!strcmp(A[0], "quit")) {
 			if(n > 1) {
