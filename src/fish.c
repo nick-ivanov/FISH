@@ -157,7 +157,7 @@ int main()
 
 		if(!strcmp(A[0], "quit")) {
 			if(n > 1) {
-				cerr << "FISH SYNTAX ERROR: QUIT does not take any arguments." << endl;
+				fprintf(stderr, "FISH SYNTAX ERROR: QUIT does not take any arguments.\n");
 				continue;	
 			}
 
