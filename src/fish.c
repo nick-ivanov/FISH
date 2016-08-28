@@ -162,8 +162,7 @@ int main()
 			}
 
 			printf("Thank you for using Fantastically Incredible Shell (FISH)!\n");
-			
-			cout << "Glub-glub!" << endl;
+			printf("Glub-glub!\n");
 			break;
 		}
 
