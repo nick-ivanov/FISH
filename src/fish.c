@@ -158,7 +158,7 @@ int main()
 		if(!strcmp(A[0], "quit")) {
 			if(n > 1) {
 				fprintf(stderr, "FISH SYNTAX ERROR: QUIT does not take any arguments.\n");
-				continue;	
+				continue;
 			}
 
 			printf("Thank you for using Fantastically Incredible Shell (FISH)!\n");
@@ -168,8 +168,8 @@ int main()
 
 		if(!strcmp(A[0], "help")) {
 			if(n > 2) {
-				cerr << "FISH SYNTAX ERROR: HELP takes one or no arguments." << endl;
-				continue;	
+				fprintf(stderr, "FISH SYNTAX ERROR: HELP takes one or no arguments.\n");
+				continue;
 			}
 
 			if(n == 1) {
