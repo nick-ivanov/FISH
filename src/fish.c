@@ -173,7 +173,8 @@ int main()
 			}
 
 			if(n == 1) {
-				cout << "*** FISH ver. 1.0 -- Fantastically Incredible SHell ***" << endl << endl;
+				printf("*** FISH ver. 1.0 -- Fantastically Incredible SHell ***\n\n");
+				
 				cout << "FISH is a UNIX command interpreter proudly designed" << endl;
 				cout << "and implemented at SMSU. Here is the list of commands" << endl;
 				cout << "supported by FISH:" << endl << endl;
