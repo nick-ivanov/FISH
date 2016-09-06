@@ -36,6 +36,7 @@ int main()
 		printf("mnsh> ");
 		scanf("%s", &user_input);
 		user_input[4095] = '\0';
+
 		printf("Reply: %s\n", user_input);
 	}
 
