@@ -1,5 +1,10 @@
 mnsh Changelog
 
+Development version 0.0.2
+SUMMARY: Basic functionality
+- main.c: command user input loop is added
+- main.c: license header is added
+
 Development version 0.0.1
 SUMMARY: The project is transitioning from C++ to C
 - main.c: created
