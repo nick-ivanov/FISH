@@ -1,0 +1,8 @@
+mnsh Changelog
+
+Development version 0.0.1
+SUMMARY: The project is transitioning from C++ to C
+- main.c: created
+- Makefile: created
+- CHANGELOG.txt: created
+- LICENSE.txt: renamed from license.txt
