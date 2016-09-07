@@ -18,6 +18,7 @@
 
 #define NN_TRUE 1
 #define NN_FALSE 0
+#define MAX_COMMAND_LENGTH 4096
 
 #include <stdio.h>
 #include <unistd.h>
@@ -35,7 +36,7 @@ int main()
 	while(status_repeat) {
 		printf("mnsh> ");
 		scanf("%s", &user_input);
-		user_input[4095] = '\0';
+		user_input[MAX_COMMAND_LENGTH] = '\0';
 
 		printf("Reply: %s\n", user_input);
 	}
