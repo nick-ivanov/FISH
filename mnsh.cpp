@@ -1,3 +1,5 @@
+// OBSOLETE
+
 /*
 mnsh - Minnesota Shell: a cross-platform command interpreter
 Copyright (C) 2015-2016 Nick Ivanov <nnrowan@gmail.com>

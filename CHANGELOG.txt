@@ -1,5 +1,9 @@
 mnsh Changelog
 
+Development version 0.0.3
+SUMMARY: Minor edits
+- main.cpp: mark as obsolete
+
 Development version 0.0.2
 SUMMARY: Basic functionality
 - main.c: command user input loop is added
