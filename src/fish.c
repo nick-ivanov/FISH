@@ -177,8 +177,8 @@ int main()
 				printf("FISH is a UNIX command interpreter proudly designed\n");
 				printf("and implemented at SMSU. Here is the list of commands\n");
 				printf("supported by FISH:\n\n");
-
-				cout << "RUN, LAUNCH, LIST, COPY, REMOVE, CD, SHOW, HELP, QUIT, MKDIR, RMDIR" << endl << endl;
+				printf("RUN, LAUNCH, LIST, COPY, REMOVE, CD, SHOW, HELP, QUIT, MKDIR, RMDIR\n\n");
+				
 				cout << "To get help on each of those commands, type HELP <command> (i.e. HELP CD)" << endl;
 				cout << "NOTE that FISH commands are case-insensitive, yet all the arguments" << endl;
 				cout << "are case-sensitive (except for HELP whose argument is case-insensitive)." << endl;
