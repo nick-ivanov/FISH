@@ -1,5 +1,10 @@
 mnsh Changelog
 
+Development version 0.0.4
+SUMMARY: Minor edits
+- TODO.txt: added
+- README.txt: better explanation
+
 Development version 0.0.3
 SUMMARY: Minor edits
 - main.cpp: mark as obsolete

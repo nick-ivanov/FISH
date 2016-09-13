@@ -1,4 +1,4 @@
-// OBSOLETE
+// OBSOLETE: used only for reference
 
 /*
 mnsh - Minnesota Shell: a cross-platform command interpreter
