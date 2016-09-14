@@ -111,7 +111,7 @@ int main()
 	// Create a dynamic array, and allocate the memory
 	char **A = (char **) malloc (FISH_MAX_CMD_WORDS * sizeof(char *));
 
-	if(A == null) {
+	if(A == NULL) {
 		fprintf(stderr, "System error. Nobody's fault. Try again.\n");
 		exit(1);
 	}
