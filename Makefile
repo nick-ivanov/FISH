@@ -1,10 +1,10 @@
 # Makefile for mnsh
 
-mnsh: main.o
-	gcc -o mnsh main.o
+bin/mnsh: build/main.o
+	gcc -o bin/mnsh build/main.o
 
-main.o: main.c
-	gcc -c main.c
+build/main.o: src/main.c
+	gcc -o build/main.o -c src/main.c
 
 clean:
-	rm -f *.o mnsh
+	rm -f build/*.o bin/mnsh

@@ -1,6 +1,6 @@
 /*
     mnsh -- Minnesota Shell: command interpreter for Linux
-    Copyright (C) 2016  Nick Ivanov <nick@nnbits.org>
+    Copyright (C) 2015-2016  Nick Ivanov <nick@nnbits.org>
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -25,6 +25,7 @@
 #include <sys/types.h>
 #include <sys/stat.h>
 #include <stdlib.h>
+#include <string.h>
 
 int main()
 {
@@ -37,6 +38,11 @@ int main()
 		printf("mnsh> ");
 		scanf("%s", &user_input);
 		user_input[MAX_COMMAND_LENGTH] = '\0';
+
+		if(!strncmp(user_input, "quit", 4)) {
+			printf("Thank you for using Minnesota Shell!\n");
+			break;
+		}
 
 		printf("Reply: %s\n", user_input);
 	}

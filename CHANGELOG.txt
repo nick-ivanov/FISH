@@ -1,5 +1,11 @@
 mnsh Changelog
 
+dev-0.0.4
+- Use simpler format of Changelog
+- Do imperative statements in Changelog
+- Add directories bin/ build/ and src/
+- Makefile: adjust for the new directories
+
 Development version 0.0.4
 SUMMARY: Minor edits
 - TODO.txt: added
