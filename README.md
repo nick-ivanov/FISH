@@ -8,3 +8,8 @@ Using bash in Linux for over a decade, I accumulated a lot of things that "could
 Suggestions are highly appreciated.
 
 Nick
+
+## Commands to Implement
+.l -- list of files
+.d -- create a new directory
+.g -- go home
