@@ -18,6 +18,7 @@ DOCUMENTATION: Build and run the program; then type HELP to
 #include <stdlib.h>
 #include <unistd.h>
 #include <dirent.h>
+#include <ctype.h>
 #include <sys/dir.h>
 #include <sys/types.h>
 #include <sys/stat.h>
