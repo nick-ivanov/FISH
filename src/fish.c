@@ -60,7 +60,7 @@ void parse(char** A, int& n)
 	int i = 0;
 	n = 0;
 
-	bool begin_flag = true;	// We have not encountered any words yet;
+	int begin_flag = 1;	// We have not encountered any words yet;
 
 	do {
 		//ch = cin.get();
@@ -89,7 +89,7 @@ void parse(char** A, int& n)
 			break;	// Nothing else to do
 		}
 
-		begin_flag = false;// So we are no longer reading a series of leading spaces
+		begin_flag = 0;// So we are no longer reading a series of leading spaces
 
 		if(i >= FISH_MAX_WORD_LEN) { // One of the words is too long
 			n = -2;	// Save error status
@@ -99,7 +99,7 @@ void parse(char** A, int& n)
 		
 		A[n][i++] = ch;	// Write character, increment counter
 		A[n][i] = '\0';	// Terminate each time. Who said it is the fastest shell in the world?
-	} while (true);	// Sentinnel control should occur in the middle of the loop
+	} while (1);	// Sentinnel control should occur in the middle of the loop
 
 	// Now if the line has some words, transform the index of last word into the array size
 	if(!begin_flag) { n++; }
