@@ -180,10 +180,9 @@ int main()
 				printf("supported by FISH:\n\n");
 				printf("RUN, LAUNCH, LIST, COPY, REMOVE, CD, SHOW, HELP, QUIT, MKDIR, RMDIR\n\n");
 				printf("To get help on each of those commands, type HELP <command> (i.e. HELP CD)");
-
 				printf("NOTE that FISH commands are case-insensitive, yet all the arguments\n");
+				printf("are case-sensitive (except for HELP whose argument is case-insensitive).\n");
 				
-				cout << "are case-sensitive (except for HELP whose argument is case-insensitive)." << endl;
 				continue;
 			}
 
