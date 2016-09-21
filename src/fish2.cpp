@@ -2,12 +2,10 @@
 FILE NAME:     fish2.cpp
 VERSION:       1.0
 DESCRIPTION:   Fantasticly Incredible Shell (FISH) -- a Unux command
-                     interpreter proudly designed and implemented at
-                     SMSU.
-CLASS:         COMP 376, Fall 2015 Semester @ SMSU
-INSTRUCTOR:    Professor Daniel Kaiser <dan.kaiser@smsu.edu>
-AUTHOR:        Nikolay Ivanov (Nick) <nikolay.ivanov@smsu.edu>
-                     <nnrowan@gmail.com>
+                     interpreter.
+
+AUTHOR:        Nick Ivanov (Nick) <nick@nnbits.org>
+                
 LICENSE:       GNU General Public License v.3
                [http://www.gnu.org/licenses/gpl-3.0.en.html]
 DATE:          12/09/2015
