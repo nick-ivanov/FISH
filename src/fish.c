@@ -193,7 +193,7 @@ int main()
 			if(!strcmp(A[1], "run")) {
 
 				printf("RUN executes a program using its filename.\n");
-				cout << "FORMAT:" << endl;
+				printf("FORMAT:\n");
 				cout << "\tRUN <executable-filename> [<argument1> <argument2> .. <argument9>]" << endl;
 				cout << "EXAMPLE:" << endl;
 				cout << "\tRUN /bin/ls -l" << endl;
