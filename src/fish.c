@@ -195,7 +195,7 @@ int main()
 				printf("RUN executes a program using its filename.\n");
 				printf("FORMAT:\n");
 				printf("RUN <executable-filename> [<argument1> <argument2> .. <argument9>]\n");
-				cout << "EXAMPLE:" << endl;
+				printf("EXAMPLE:\n");
 				cout << "\tRUN /bin/ls -l" << endl;
 				continue;
 			}
