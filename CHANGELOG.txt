@@ -1,4 +1,7 @@
-mnsh Changelog
+fishx Changelog
+
+Sep 21, 2016:
+- Rename project into fishx
 
 dev-0.0.4
 - Use simpler format of Changelog

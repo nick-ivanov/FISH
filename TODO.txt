@@ -1,4 +1,9 @@
 This file consists of a list of features and fixes to be done. Please put your name and date in the brackets if you are working on an item
 
-[name date] Add global context header
-[name date] Create a file with specifications
+- Refactor to fishx
+- Organize build in CLion
+- Split into many files
+- Research the possibility of translating it into C
+- Create a new branch for C translation
+- Try non-unit testing
+- Fix syntax errors
