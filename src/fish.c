@@ -191,12 +191,11 @@ int main()
 			tolower_argvx(A, 1);	// Lowercase the argument
 
 			if(!strcmp(A[1], "run")) {
-
 				printf("RUN executes a program using its filename.\n");
 				printf("FORMAT:\n");
 				printf("RUN <executable-filename> [<argument1> <argument2> .. <argument9>]\n");
 				printf("EXAMPLE:\n");
-				cout << "\tRUN /bin/ls -l" << endl;
+				printf("\tRUN /bin/ls -l\n");
 				continue;
 			}
 
