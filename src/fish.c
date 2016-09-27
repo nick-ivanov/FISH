@@ -202,7 +202,7 @@ int main()
 			if(!strcmp(A[1], "launch")) {
 				printf("LAUNCH searches a program in PATH directories and executes it.\n");
 				printf("FORMAT:\n");
-				cout << "\tLAUNCH <program> [<argument1> <argument2> .. <argument9>]" << endl;
+				printf("\tLAUNCH <program> [<argument1> <argument2> .. <argument9>]\n");
 				cout << "EXAMPLE:" << endl;
 				cout << "\tLAUNCH ls -l" << endl;
 				continue;
