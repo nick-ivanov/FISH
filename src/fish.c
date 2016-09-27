@@ -203,100 +203,100 @@ int main()
 				printf("LAUNCH searches a program in PATH directories and executes it.\n");
 				printf("FORMAT:\n");
 				printf("\tLAUNCH <program> [<argument1> <argument2> .. <argument9>]\n");
-				cout << "EXAMPLE:" << endl;
-				cout << "\tLAUNCH ls -l" << endl;
+				printf("EXAMPLE:\n");
+				printf("\tLAUNCH ls -l\n");
 				continue;
 			}
 
 			if(!strcmp(A[1], "list")) {
-				cout << "LIST prints everything that is in a directory." << endl;
-				cout << "With no argument, the contents of the current directory will be shown." << endl;
-				cout << "FORMAT:" << endl;
-				cout << "\tLIST [<directory>]" << endl;
-				cout << "EXAMPLE:" << endl;
-				cout << "\tLIST /" << endl;
+				printf("LIST prints everything that is in a directory.\n");
+				printf("With no argument, the contents of the current directory will be shown.\n");
+				printf("FORMAT:\n");
+				printf("\tLIST [<directory>]\n");
+				printf("EXAMPLE:\n");
+				printf("\tLIST /\n");
 				continue;
 			}
 
 			if(!strcmp(A[1], "copy")) {
-				cout << "COPY copies a file. The second argument is either a file or a directory." << endl;
-				cout << "FORMAT:" << endl;
-				cout << "\tCOPY <source-file> <destination-file-or-directory>" << endl;
-				cout << "EXAMPLE:" << endl;
-				cout << "\tCOPY foo.txt bar.txt" << endl;
+				printf("COPY copies a file. The second argument is either a file or a directory.\n");
+				printf("FORMAT:\n");
+				printf("\tCOPY <source-file> <destination-file-or-directory>\n");
+				printf("EXAMPLE:\n");
+				printf("\tCOPY foo.txt bar.txt\n");
 				continue;
 			}
 
 			if(!strcmp(A[1], "remove")) {
-				cout << "REMOVE deletes a file." << endl;
-				cout << "FORMAT:" << endl;
-				cout << "\tREMOVE <file>" << endl;
-				cout << "EXAMPLE:" << endl;
-				cout << "\tREMOVE foo.txt" << endl;
+				printf("REMOVE deletes a file.\n");
+				printf("FORMAT:\n");
+				printf("\tREMOVE <file>\n");
+				printf("EXAMPLE:\n");
+				printf("\tREMOVE foo.txt\n");
 				continue;
 			}
 
 			if(!strcmp(A[1], "cd")) {
-				cout << "CD changes the current directory." << endl;
-				cout << "With no argument, the home directory will be set as current." << endl;
-				cout << "FORMAT:" << endl;
-				cout << "\tCD [<directory>]" << endl;
-				cout << "EXAMPLE:" << endl;
-				cout << "\tCD /bin" << endl;
+				printf("CD changes the current directory.\n");
+				printf("With no argument, the home directory will be set as current.\n");
+				printf("FORMAT:\n");
+				printf("\tCD [<directory>]\n");
+				printf("EXAMPLE:\n");
+				printf("\tCD /bin\n");
 				continue;
 			}
 
 			if(!strcmp(A[1], "show")) {
-				cout << "SHOW shows the text contents of a file." << endl;
-				cout << "FORMAT:" << endl;
-				cout << "\tSHOW <file>" << endl;
-				cout << "EXAMPLE:" << endl;
-				cout << "\tSHOW foo.txt" << endl;
+				printf("SHOW shows the text contents of a file.\n");
+				printf("FORMAT:\n");
+				printf("\tSHOW <file>\n");
+				printf("EXAMPLE:\n");
+				printf("\tSHOW foo.txt\n");
 				continue;
 			}
 
 			if(!strcmp(A[1], "help")) {
-				cout << "HELP prints documentation on FISH commands and user behavior." << endl;
-				cout << "An optional argument specifies a particular command to get help on." << endl;
-				cout << "FORMAT:" << endl;
-				cout << "\tHELP [<fish-command>]" << endl;
-				cout << "EXAMPLE:" << endl;
-				cout << "\tHELP SHOW" << endl;
+				printf("HELP prints documentation on FISH commands and user behavior.\n");
+				printf("An optional argument specifies a particular command to get help on.\n");
+				printf("FORMAT:\n");
+				printf("\tHELP [<fish-command>]\n");
+				printf("EXAMPLE:\n");
+				printf("\tHELP SHOW\n");
 				continue;
 			}
 
 			if(!strcmp(A[1], "quit")) {
-				cout << "QUIT exits FISH command interpreter." << endl;
-				cout << "FORMAT:" << endl;
-				cout << "\tQUIT" << endl;
+				printf("QUIT exits FISH command interpreter.\n");
+				printf("FORMAT:\n");
+				printf("\tQUIT\n");
 				continue;
 			}
 
 			if(!strcmp(A[1], "mkdir")) {
-				cout << "MKDIR creates a new directory." << endl;
-				cout << "FORMAT:" << endl;
-				cout << "\tMKDIR <directory-name>" << endl;
-				cout << "EXAMPLE:" << endl;
-				cout << "\tMKDIR foobar" << endl;
+				printf("MKDIR creates a new directory.\n");
+				printf("FORMAT:\n");
+				printf("\tMKDIR <directory-name>\n");
+				printf("EXAMPLE:\n");
+				printf("\tMKDIR foobar\n");
 				continue;
 			}
 
 			if(!strcmp(A[1], "rmdir")) {
-				cout << "RMDIR removes an empty directory; if it is not empty, the deletion will fail." << endl;
-				cout << "FORMAT:" << endl;
-				cout << "\tRMDIR <directory-name>" << endl;
-				cout << "EXAMPLE:" << endl;
-				cout << "\tRMDIR foobar" << endl;
+				printf("RMDIR removes an empty directory; if it is not empty, the deletion will fail.\n");
+				printf("FORMAT:\n");
+				printf("\tRMDIR <directory-name>\n");
+				printf("EXAMPLE:\n");
+				printf("\tRMDIR foobar\n");
 				continue;
 			}
 
-			cerr << "FISH does not have command '" << A[1] << "'" << endl;
+			fprintf(stderr, "FISH does not have command '" << A[1] << "'\n");
 			continue;
 		}
 
 		if(!strcmp(A[0], "run")) {
 			if(n < 2 || n > 10) {
-				cerr << "FISH SYNTAX ERROR: Command RUN takes one to nine arguments." << endl;
+				fprintf(stderr, "FISH SYNTAX ERROR: Command RUN takes one to nine arguments.\n");
 				continue;
 			}
 
@@ -319,7 +319,7 @@ int main()
 					case 10: execl(A[1], A[1], A[2], A[3], A[4], A[5], A[6], A[7], A[8], A[9], NULL); break;
 					
 					default:
-						cerr << "FISH SYNTAX ERROR: Command RUN takes one to eleven arguments." << endl;
+						fprintf(stderr, "FISH SYNTAX ERROR: Command RUN takes one to eleven arguments.\n");
 						continue;
 				}
 
@@ -334,7 +334,7 @@ int main()
 
 		if(!strcmp(A[0], "launch")) {
 			if(n < 2 || n > 10) {
-				cerr << "FISH SYNTAX ERROR: Command LAUNCH takes one to nine arguments." << endl;
+				fprintf(stderr, "FISH SYNTAX ERROR: Command LAUNCH takes one to nine arguments.\n");
 				continue;
 			}
 
@@ -357,7 +357,7 @@ int main()
 					case 10: execlp(A[1], A[1], A[2], A[3], A[4], A[5], A[6], A[7], A[8], A[9], NULL); break;
 					
 					default:
-						cerr << "FISH SYNTAX ERROR: Command LAUNCH takes one to eleven arguments." << endl;
+						fprintf(stderr, "FISH SYNTAX ERROR: Command LAUNCH takes one to eleven arguments.\n");
 						continue;
 				}
 
@@ -383,11 +383,11 @@ int main()
 
 			int i = 0;
 			while((entry = readdir(dir)) != NULL) {
-				cout << entry->d_name << endl;
+				printf(entry->d_name << endl;
 				i++;
 			}
-			cout << "---" << endl;
-			cout << "TOTAL: " << i << " items." << endl;
+			printf("---\n");
+			printf("TOTAL: " << i << " items.\n");
 			closedir(dir);
 			continue;
 		}
@@ -405,29 +405,29 @@ int main()
 
 			int i = 0;
 			while((entry = readdir(dir)) != NULL) {
-				cout << entry->d_name << endl;
+				printf(entry->d_name << endl;
 				i++;
 			}
-			cout << "---" << endl;
-			cout << "TOTAL: " << i << " items." << endl;
+			printf("---\n");
+			printf("TOTAL: " << i << " items.\n");
 			closedir(dir);
 			continue;
 		}
 
 		if(!strcmp(A[0], "list") && n > 2) {
-			cerr << "FISH SYNTAX ERROR: LIST can only take one or no arguments." << endl;
+			fprintf(stderr, "FISH SYNTAX ERROR: LIST can only take one or no arguments.\n");
 			continue;
 		}
 
 		if(!strcmp(A[0], "copy")) {
 			if(n != 3) {
-				cerr << "FISH SYNTAX ERROR: COPY can take only two arguments." << endl;
+				fprintf(stderr, "FISH SYNTAX ERROR: COPY can take only two arguments.\n");
 				continue;
 			}
 
 //			ifstream f1(A[1]);
 //			if(!f1) {
-//				cerr << "FISH: File " << f1 << " does not exist or cannot be copied." << endl;
+//				fprintf(stderr, "FISH: File " << f1 << " does not exist or cannot be copied.\n");
 //				continue;
 //			}
 
@@ -446,14 +446,14 @@ int main()
 
 						// Doing so, remember about sizes
 						if(i == FISH_MAX_WORD_LEN) {	// This is where the infamous GOTO is handy
-							cerr << "FISH ERROR: File name is too long." << endl;
+							fprintf(stderr, "FISH ERROR: File name is too long.\n");
 							break;
 						}
 					}
 
 					// Without GOTO, we have to check the same condition twice. Not a big problem though :)
 					if(i == FISH_MAX_WORD_LEN) {
-						cerr << "FISH ERROR: File name is too long." << endl;
+						fprintf(stderr, "FISH ERROR: File name is too long.\n");
 						continue;
 					}
 
@@ -463,7 +463,7 @@ int main()
 
 //			ofstream f2(A[2]);
 //			if(!f2) {
-//				cerr << "FISH: Cannot copy." << endl;
+//				fprintf(stderr, "FISH: Cannot copy.\n");
 //				f1.close();
 //				continue;
 //			}
@@ -478,8 +478,8 @@ int main()
 				}
 			} while(!f1.eof());
 
-			cout << A[1] << " ==> " << A[2] << endl;
-			cout << i << " bytes copied." << endl;
+			printf(A[1] << " ==> " << A[2] << endl;
+			printf(i << " bytes copied.\n");
 
 			f2.close();
 			f1.close();
@@ -490,21 +490,21 @@ int main()
 
 		if(!strcmp(A[0], "remove")) {
 			if(n != 2) {
-				cerr << "FISH ERROR: REMOVE command requires one argument." << endl;
+				fprintf(stderr, "FISH ERROR: REMOVE command requires one argument.\n");
 				continue;
 			}
 
 			if(unlink(A[1]) == -1) {
-				cerr << "FISH ERROR: File " << A[1] << " cannot be removed." << endl;
+				fprintf(stderr, "FISH ERROR: File " << A[1] << " cannot be removed.\n");
 			} else {
-				cerr << "R.I.P., " << A[1] << endl;
+				fprintf(stderr, "R.I.P., " << A[1] << endl;
 			}
 			continue;
 		}
 
 		if(!strcmp(A[0], "cd")) {
 			if(n > 2) {
-				cerr << "FISH ERROR: REMOVE command requires one or no argument." << endl;
+				fprintf(stderr, "FISH ERROR: REMOVE command requires one or no argument.\n");
 				continue;
 			}
 
@@ -513,7 +513,7 @@ int main()
 			}
 
 			if(chdir(A[1]) == -1) {
-				cerr << "FISH ERROR: Cannot change directory." << endl;
+				fprintf(stderr, "FISH ERROR: Cannot change directory.\n");
 			}
 
 			continue;
@@ -521,20 +521,20 @@ int main()
 
 		if(!strcmp(A[0], "show")) {
 			if(n != 2) {
-				cerr << "FISH SYNTAX ERROR: SHOW command requires one argument." << endl;
+				fprintf(stderr, "FISH SYNTAX ERROR: SHOW command requires one argument.\n");
 				continue;
 			}
 
 			ifstream f(A[1]);
 			if(!f) {
-				cerr << "FISH ERROR: Cannot open file " << A[1] << endl;
+				fprintf(stderr, "FISH ERROR: Cannot open file " << A[1] << endl;
 				continue;
 			}
 
 			char ch;
 			while(!f.eof()) { 
 				ch = f.get();
-				if(ch != EOF) { cout << ch; }
+				if(ch != EOF) { printf(ch; }
 			}
 
 			f.close();
@@ -543,14 +543,14 @@ int main()
 
 		if(!strcmp(A[0], "mkdir")) {
 			if(n != 2) {
-				cerr << "FISH SYNTAX ERROR: MKDIR takes one argument." << endl;
+				fprintf(stderr, "FISH SYNTAX ERROR: MKDIR takes one argument.\n");
 				continue;
 			}
 
 			if(mkdir(A[1], 0755) == -1) {
-				cerr << "FISH ERROR: Cannot create a directory." << endl;
+				fprintf(stderr, "FISH ERROR: Cannot create a directory.\n");
 			} else {
-				cout << "Welcome on board, " << A[1] << "!" << endl;
+				printf("Welcome on board, " << A[1] << "!\n");
 			}
 
 			continue;
@@ -558,14 +558,14 @@ int main()
 
 		if(!strcmp(A[0], "rmdir")) {
 			if(n != 2) {
-				cerr << "FISH SYNTAX ERROR: RMDIR takes one argument." << endl;
+				fprintf(stderr, "FISH SYNTAX ERROR: RMDIR takes one argument.\n");
 				continue;
 			}
 
 			if(rmdir(A[1]) == -1) {
-				cerr << "FISH ERROR: Cannot delete a directory." << endl;
+				fprintf(stderr, "FISH ERROR: Cannot delete a directory.\n");
 			} else {
-				cerr << "R.I.P., " << A[1] << "/" << endl;
+				fprintf(stderr, "R.I.P., " << A[1] << "/\n");
 			}
 
 			continue;
@@ -573,8 +573,8 @@ int main()
 
 		if(A[0][0] == '\0') { continue; }
 
-		cerr << "FISH SYNTAX ERROR: Command '" << A[0] << "' is not implemented. ";
-		cerr << "Ask Nick to implement it." << endl;
+		fprintf(stderr, "FISH SYNTAX ERROR: Command '" << A[0] << "' is not implemented. ";
+		fprintf(stderr, "Ask Nick to implement it.\n");
 	}
 	
 	// Now clean up the mess
