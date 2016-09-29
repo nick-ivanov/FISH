@@ -290,7 +290,7 @@ int main()
 				continue;
 			}
 
-			fprintf(stderr, "FISH does not have command '" << A[1] << "'\n");
+			fprintf(stderr, "FISH does not have command '%s'\n", A[1]);
 			continue;
 		}
 
