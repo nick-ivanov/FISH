@@ -498,7 +498,7 @@ int main()
 			if(unlink(A[1]) == -1) {
 				fprintf(stderr, "FISH ERROR: File " << A[1] << " cannot be removed.\n");
 			} else {
-				fprintf(stderr, "R.I.P., " << A[1] << endl;
+				fprintf(stderr, "R.I.P., %s", A[1]);
 			}
 			continue;
 		}
