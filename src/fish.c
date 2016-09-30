@@ -15,6 +15,7 @@ DOCUMENTATION: Build and run the program; then type HELP to
 */
 
 #include <string.h>
+#include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
 #include <dirent.h>
