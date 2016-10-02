@@ -498,7 +498,7 @@ int main()
 			if(unlink(A[1]) == -1) {
 				fprintf(stderr, "FISH ERROR: File %s cannot be removed.\n", A[1]);
 			} else {
-				fprintf(stderr, "R.I.P., %s", A[1]);
+				fprintf(stderr, "R.I.P., %s\n", A[1]);
 			}
 			continue;
 		}
@@ -528,7 +528,7 @@ int main()
 
 			ifstream f(A[1]);
 			if(!f) {
-				fprintf(stderr, "FISH ERROR: Cannot open file " << A[1] << endl;
+				fprintf(stderr, "FISH ERROR: Cannot open file %s\n", A[1]);;
 				continue;
 			}
 
