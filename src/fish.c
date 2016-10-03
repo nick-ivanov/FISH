@@ -574,7 +574,7 @@ int main()
 
 		if(A[0][0] == '\0') { continue; }
 
-		fprintf(stderr, "FISH SYNTAX ERROR: Command '" << A[0] << "' is not implemented. ";
+		fprintf(stderr, "FISH SYNTAX ERROR: Command '%s' is not implemented. ", A[0]);
 		fprintf(stderr, "Ask Nick to implement it.\n");
 	}
 	
