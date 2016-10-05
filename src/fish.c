@@ -573,7 +573,9 @@ int main()
 			continue;
 		}
 
-		if(A[0][0] == '\0') { continue; }
+		if(A[0][0] == '\0') {
+			continue;
+		}
 
 		fprintf(stderr, "FISH SYNTAX ERROR: Command '%s' is not implemented. ", A[0]);
 		fprintf(stderr, "Ask Nick to implement it.\n");
