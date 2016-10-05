@@ -581,9 +581,9 @@ int main()
 	
 	// Now clean up the mess
 	for(int i = 0; i < n; i++) {
-		delete [] A[i];
+		free(A[i]);
 	}
 
-	delete [] A;
+	free(A);
 	return 0;
 }
