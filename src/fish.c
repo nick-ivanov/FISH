@@ -376,6 +376,7 @@ int main()
 			struct dirent* entry;
 
 			dir = opendir(getcwd(NULL, 256));
+
 			if(dir == NULL) {
 				perror("FISH ERROR");
 				closedir(dir);
@@ -387,8 +388,9 @@ int main()
 				printf(entry->d_name << endl;
 				i++;
 			}
+
 			printf("---\n");
-			printf("TOTAL: " << i << " items.\n");
+			printf("TOTAL: %d items.\n", i);
 			closedir(dir);
 			continue;
 		}
