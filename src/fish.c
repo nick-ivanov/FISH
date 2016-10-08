@@ -412,7 +412,7 @@ int main()
 				i++;
 			}
 			printf("---\n");
-			printf("TOTAL: " << i << " items.\n");
+			printf("TOTAL: %d items.\n", i);
 			closedir(dir);
 			continue;
 		}
