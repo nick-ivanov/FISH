@@ -408,7 +408,7 @@ int main()
 
 			int i = 0;
 			while((entry = readdir(dir)) != NULL) {
-				printf(entry->d_name << endl;
+				printf("%s\n", entry->d_name);
 				i++;
 			}
 			printf("---\n");
