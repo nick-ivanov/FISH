@@ -569,7 +569,7 @@ int main()
 			if(rmdir(A[1]) == -1) {
 				fprintf(stderr, "FISH ERROR: Cannot delete a directory.\n");
 			} else {
-				fprintf(stderr, "R.I.P., " << A[1] << "/\n");
+				fprintf(stderr, "R.I.P., %s/\n", A[1]);
 			}
 
 			continue;
