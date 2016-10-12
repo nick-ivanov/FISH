@@ -554,7 +554,7 @@ int main()
 			if(mkdir(A[1], 0755) == -1) {
 				fprintf(stderr, "FISH ERROR: Cannot create a directory.\n");
 			} else {
-i				printf("Welcome on board, %s!\n", A[1]);
+				printf("Welcome on board, %s!\n", A[1]);
 			}
 
 			continue;
