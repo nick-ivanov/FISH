@@ -55,11 +55,11 @@ ARGUMENTS:
 	A:		array of strings the words will be written into;
 	n:		passed by reference, obtains the number of words read. 
 RETURN VALUE: None */
-void parse(char** A, int& n)
+int parse(char** A)
 {
 	char ch;
 	int i = 0;
-	n = 0;
+	int n = 0;
 
 	int begin_flag = 1;	// We have not encountered any words yet;
 
@@ -104,6 +104,8 @@ void parse(char** A, int& n)
 
 	// Now if the line has some words, transform the index of last word into the array size
 	if(!begin_flag) { n++; }
+
+	return n;
 }
 
 /* The show starts in here */
@@ -139,8 +141,7 @@ int main()
 			A[i][0] = '\0';
 		} 
 		
-		n = 0;
-		parse(A, n); // TODO: Fix pass by reference
+		n = parse(A);
 
 		if(n == -1) {	// Check the boundaries
 			fprintf(stderr, "FISH ERROR: The number of words cannot exceed %d.\n",
