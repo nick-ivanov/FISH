@@ -130,7 +130,7 @@ int main()
 		}
 	}
 	
-	while(true) {
+	while(1) {
 		// Command line prompt. Yes, it's a fish!
 		printf("[%s] ><(((*> ", getcwd(NULL, 64));
 
