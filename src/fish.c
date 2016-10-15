@@ -74,19 +74,19 @@ int parse(char** A)
 			if(n >= FISH_MAX_CMD_WORDS) { // Too many words
 				n = -1;		// Save error status
 				do { ch = getchar(); } while (ch != '\n'); // Flush drop by drop
-				return;		// Get out of here completely
+				return n;		// Get out of here completely
 			}
 
 			do {	// Skip a series of spaces
 				ch = getchar();
-				if(ch == '\n') { return; }	// It was a trailing space
+				if(ch == '\n') { return n; }	// It was a trailing space
 			} while (ch == ' ');	// Is it still a space?
 
 			i = 0;	// New word
 		}
 
 		if(ch == '\n') {	// End of input
-			if(begin_flag) { n = 0; return; }	// The empty line case
+			if(begin_flag) { n = 0; return n; }	// The empty line case
 			break;	// Nothing else to do
 		}
 
@@ -95,7 +95,7 @@ int parse(char** A)
 		if(i >= FISH_MAX_WORD_LEN) { // One of the words is too long
 			n = -2;	// Save error status
 			do { ch = getchar(); } while (ch != '\n'); // Flush drop by drop
-			return;	// Get out of here completely
+			return n;	// Get out of here completely
 		}
 		
 		A[n][i++] = ch;	// Write character, increment counter
