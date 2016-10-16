@@ -432,7 +432,7 @@ int main()
 			FILE * f1 = fopen(A[1], "r");
 
 			if(f1 == NULL) {
-				fprintf(stderr, "FISH: File " << f1 << " does not exist or cannot be copied.\n");
+				fprintf(stderr, "FISH: File %s does not exist or cannot be copied.\n", A[1]);
 				continue;
 			}
 
