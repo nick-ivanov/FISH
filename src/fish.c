@@ -431,11 +431,10 @@ int main()
 
 			FILE * f1 = fopen(A[1], "r");
 
-//			ifstream f1(A[1]);
-//			if(!f1) {
-//				fprintf(stderr, "FISH: File " << f1 << " does not exist or cannot be copied.\n");
-//				continue;
-//			}
+			if(f1 == NULL) {
+				fprintf(stderr, "FISH: File " << f1 << " does not exist or cannot be copied.\n");
+				continue;
+			}
 
 			// Allow to copy to a directory
 			struct stat st;
