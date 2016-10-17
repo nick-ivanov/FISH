@@ -466,6 +466,9 @@ int main()
 				}
 			}
 
+
+			FILE * f2 = fopen(A[2], "w");
+			
 //			ofstream f2(A[2]);
 //			if(!f2) {
 //				fprintf(stderr, "FISH: Cannot copy.\n");
