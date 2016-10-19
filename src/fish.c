@@ -474,7 +474,7 @@ int main()
 				f1.close();
 				continue;
 			}
-/*
+
 			char ch;
 			long int i = 0;
 			do {
@@ -491,7 +491,7 @@ int main()
 			f2.close();
 			f1.close();
 
-*/
+
 			continue;
 		}
 
