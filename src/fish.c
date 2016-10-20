@@ -486,7 +486,7 @@ int main()
 			} while(!f1.eof());
 
 			printf("%s ==> %s\n", A[1], A[2]);
-			printf(i << " bytes copied.\n");
+			printf("%d bytes copied.\n", i);
 
 			f2.close();
 			f1.close();
