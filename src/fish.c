@@ -480,7 +480,7 @@ int main()
 			do {
 				ch = f1.get();
 				if(ch != EOF) {
-					f2.put(ch);
+					fputc(ch, f2);
 					i++;
 				}
 			} while(!f1.eof());
