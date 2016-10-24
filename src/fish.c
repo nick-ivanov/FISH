@@ -471,7 +471,7 @@ int main()
 
 			if(f2 == NULL) {
 				fprintf(stderr, "FISH: Cannot copy.\n");
-				f1.close();
+				fclose(f1);
 				continue;
 			}
 
@@ -483,14 +483,13 @@ int main()
 					fputc((int) ch, f2);
 					i++;
 				}
-			} while(!f1.eof());
+			} while(ch != EOF);
 
 			printf("%s ==> %s\n", A[1], A[2]);
 			printf("%d bytes copied.\n", i);
 
-			f2.close();
-			f1.close();
-
+			fclose(f2);
+			fclose(f1);
 
 			continue;
 		}
