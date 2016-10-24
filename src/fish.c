@@ -478,9 +478,9 @@ int main()
 			char ch;
 			long int i = 0;
 			do {
-				ch = f1.get();
+				ch = (char) fgetc(f1);
 				if(ch != EOF) {
-					fputc(ch, f2);
+					fputc((int) ch, f2);
 					i++;
 				}
 			} while(!f1.eof());
