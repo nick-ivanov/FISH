@@ -531,7 +531,7 @@ int main()
 				continue;
 			}
 
-/*			ifstream f(A[1]);
+			ifstream f(A[1]);
 			if(!f) {
 				fprintf(stderr, "FISH ERROR: Cannot open file %s\n", A[1]);;
 				continue;
@@ -543,8 +543,8 @@ int main()
 				if(ch != EOF) { printf(ch); }
 			}
 
-			f.close();
-			*/
+			fclose(f);
+			
 			continue;
 		}
 
