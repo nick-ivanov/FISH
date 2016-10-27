@@ -531,7 +531,9 @@ int main()
 				continue;
 			}
 
-			ifstream f(A[1]);
+			
+			FILE * f = fopen(A[1], "r");
+			
 			if(!f) {
 				fprintf(stderr, "FISH ERROR: Cannot open file %s\n", A[1]);;
 				continue;
