@@ -534,7 +534,7 @@ int main()
 			
 			FILE * f = fopen(A[1], "r");
 			
-			if(!f) {
+			if(f == NULL) {
 				fprintf(stderr, "FISH ERROR: Cannot open file %s\n", A[1]);;
 				continue;
 			}
