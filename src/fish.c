@@ -539,8 +539,8 @@ int main()
 				continue;
 			}
 
-			char ch;
-			while(!f.eof()) { 
+			char ch = 0;
+			while(ch != EOF) { 
 				ch = f.get();
 				if(ch != EOF) { printf(ch); }
 			}
