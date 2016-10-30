@@ -541,8 +541,10 @@ int main()
 
 			char ch = 0;
 			while(ch != EOF) { 
-				ch = f.get();
-				if(ch != EOF) { printf(ch); }
+				ch = fgetc(f);
+				if(ch != EOF) {
+					printf(ch);
+				}
 			}
 
 			fclose(f);
