@@ -543,7 +543,7 @@ int main()
 			while(ch != EOF) { 
 				ch = fgetc(f);
 				if(ch != EOF) {
-					printf(ch);
+					printf("%c", ch);
 				}
 			}
 
