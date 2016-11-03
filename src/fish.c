@@ -127,7 +127,7 @@ int main()
 		A[i] = (char *) malloc ((FISH_MAX_WORD_LEN+1) * sizeof(char));
 
 		if(A[i] == NULL) {
-			fprintf(stderr, "System error. Nobody's fault. Try again.");
+			fprintf(stderr, "System error. Nobody's fault. Try again.\n");
 			exit(1);
 		}
 	}
@@ -181,7 +181,7 @@ int main()
 				printf("and implemented at SMSU. Here is the list of commands\n");
 				printf("supported by FISH:\n\n");
 				printf("RUN, LAUNCH, LIST, COPY, REMOVE, CD, SHOW, HELP, QUIT, MKDIR, RMDIR\n\n");
-				printf("To get help on each of those commands, type HELP <command> (i.e. HELP CD)");
+				printf("To get help on each of those commands, type HELP <command> (i.e. HELP CD)\n");
 				printf("NOTE that FISH commands are case-insensitive, yet all the arguments\n");
 				printf("are case-sensitive (except for HELP whose argument is case-insensitive).\n");
 				
