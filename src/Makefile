@@ -1,13 +1,12 @@
 # Makefile for FISH
 
-$PROGRAM_NAME = 'fish'
-$COMPILER = $(CC)
+$CC = gcc
 
-$(PROGRAM_NAME): main.o
-	$(CC) -o fish main.o
+$(PROGRAM_NAME): fish.o
+	$(CC) -o fish fish.o
 
-build/main.o: main.c
-	$(CC) -o main.o -c main.cpp
+fish.o: fish.c
+	$(CC) -o fish.o -c fish.c
 
 clean:
 	rm -f *.o fish
