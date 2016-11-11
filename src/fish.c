@@ -1,17 +1,16 @@
 /*
 FILE NAME:     fish.c
-VERSION:       1.0
+VERSION:       1.1
 DESCRIPTION:   Fantasticly Incredible Shell (FISH) -- pretty good Unux shell.
-AUTHOR:        Nikolay Ivanov (Nick) <nnrowan@gmail.com>
+AUTHOR:        Copyright (C) 2015-2016 Nikolay Ivanov (Nick) <nnrowan@gmail.com>
 LICENSE:       GNU General Public License v.3
                [http://www.gnu.org/licenses/gpl-3.0.en.html]
-DATE:          12/09/2015
 
 DOCUMENTATION: Build and run the program; then type HELP to
                      to see the list of commands:
-                     $ gcc -o fish fish.c
+                     $ make
                      $ ./fish
-                     ><(((*> HELP
+                     [...] ><(((*> HELP
 */
 
 #include <string.h>
