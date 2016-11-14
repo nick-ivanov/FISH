@@ -13,7 +13,8 @@ DOCUMENTATION: Build and run the program; then type HELP to
                      [...] ><(((*> HELP
 */
 
-/* This function reads a line from the keyboard and writes each
+/* 
+This function reads a line from the keyboard and writes each
 word into an array of strings. The array and its resulting size
 are passed as arguments by reference. The function checks the
 boundaries and ignores any series of spaces wherever they are.
@@ -23,6 +24,7 @@ tabs and other whitespace characters.
 
 ARGUMENTS:
 	A:		array of strings the words will be written into;
-	n:		passed by reference, obtains the number of words read. 
-RETURN VALUE: None */
+
+RETURN VALUE: The number of words read.
+*/
 int parse(char** A);
