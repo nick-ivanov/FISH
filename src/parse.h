@@ -27,4 +27,5 @@ ARGUMENTS:
 
 RETURN VALUE: The number of words read.
 */
+
 int parse(char** A);
