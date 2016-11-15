@@ -2,11 +2,16 @@
 
 $CC = gcc
 
-fish: fish.o
-	$(CC) -o fish fish.o
+$OBJS = fish.o parse.o
+
+fish: $(OBJS)
+	$(CC) -o fish $(OBJS)
 
 fish.o: fish.c
 	$(CC) -c fish.c
+
+parse.o: parse.c
+	$(CC) -c parse.c
 
 clean:
 	rm -f *.o fish
