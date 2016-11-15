@@ -1,8 +1,7 @@
 # Makefile for FISH
 
-$CC = gcc
-
-$OBJS = fish.o parse.o
+CC = gcc
+OBJS = fish.o parse.o
 
 fish: $(OBJS)
 	$(CC) -o fish $(OBJS)
