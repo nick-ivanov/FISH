@@ -26,10 +26,6 @@ DOCUMENTATION: Build and run the program; then type HELP to
 
 #include "parse.h"
 
-#define FISH_MAX_CMD_WORDS	64		// Maximum number of words in a command
-#define FISH_MAX_WORD_LEN	256		// Maximum length of a word
-
-
 /* This function converts capital letter in ARGV[index] into lower case.
 This function is used for support of case-insensitive commands, as well
 as case-insensitive arguments of HELP command.
