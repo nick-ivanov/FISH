@@ -1,5 +1,7 @@
 // TODO: Add header here
 
+#include <ctype.h>
+
 #include "tolower_argvx.h"
 
 void tolower_argvx(char** ARGV, int index)

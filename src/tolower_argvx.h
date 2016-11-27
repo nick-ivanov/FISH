@@ -13,6 +13,7 @@ DOCUMENTATION: Build and run the program; then type HELP to
                      [...] ><(((*> HELP
 */
 
+#include <ctype.h>
 
 /*
 This function converts capital letter in ARGV[index] into lower case.
