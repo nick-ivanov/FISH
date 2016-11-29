@@ -27,10 +27,6 @@ DOCUMENTATION: Build and run the program; then type HELP to
 #include "parse.h"
 #include "tolower_argvx.h"
 
-
-
-
-/* The show starts in here */
 int main()
 {
 	int n;

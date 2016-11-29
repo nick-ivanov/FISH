@@ -13,8 +13,6 @@ DOCUMENTATION: Build and run the program; then type HELP to
                      [...] ><(((*> HELP
 */
 
-#include <ctype.h>
-
 /*
 This function converts capital letter in ARGV[index] into lower case.
 This function is used for support of case-insensitive commands, as well
@@ -25,4 +23,5 @@ ARGUMENTS:
 	index:			the index of the string to process.
 RETURN VALUE: None
 */
+
 void tolower_argvx(char** ARGV, int index);
