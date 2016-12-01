@@ -24,7 +24,7 @@ DOCUMENTATION: Build and run the program; then type HELP to
 #include <sys/stat.h>
 #include <sys/wait.h>
 
-#include "parse.h"
+#include "fish.h"
 #include "tolower_argvx.h"
 
 int main()
