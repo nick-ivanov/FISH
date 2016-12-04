@@ -12,16 +12,3 @@ DOCUMENTATION: Build and run the program; then type HELP to
                      $ ./fish
                      [...] ><(((*> HELP
 */
-
-/*
-This function converts capital letter in ARGV[index] into lower case.
-This function is used for support of case-insensitive commands, as well
-as case-insensitive arguments of HELP command.
-
-ARGUMENTS:
-	ARGV:			array of C-strings;
-	index:			the index of the string to process.
-RETURN VALUE: None
-*/
-
-void tolower_argvx(char** ARGV, int index);
