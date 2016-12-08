@@ -1,6 +1,6 @@
 // TODO: add header
 
-#include "help.h"
+#include "fish.h"
 
 void help(int n) {
 	;
