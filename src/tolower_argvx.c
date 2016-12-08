@@ -2,7 +2,7 @@
 
 #include <ctype.h>
 
-#include "tolower_argvx.h"
+#include "fish.h"
 
 void tolower_argvx(char** ARGV, int index)
 {
