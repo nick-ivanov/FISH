@@ -2,7 +2,7 @@
 
 #include <stdio.h>
 
-#include "parse.h"
+#include "fish.h"
 
 int parse(char** A)
 {
