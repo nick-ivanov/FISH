@@ -2,6 +2,6 @@
 
 #include "fish.h"
 
-void help(int n) {
+void help(char ** A, int n) {
 	;
 }
