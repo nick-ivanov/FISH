@@ -5,7 +5,7 @@
 void help(char ** A, int n) {
 	if(n > 2) {
 				fprintf(stderr, "FISH SYNTAX ERROR: HELP takes one or no arguments.\n");
-				continue;
+				return;
 			}
 
 			if(n == 1) {
@@ -18,7 +18,7 @@ void help(char ** A, int n) {
 				printf("NOTE that FISH commands are case-insensitive, yet all the arguments\n");
 				printf("are case-sensitive (except for HELP whose argument is case-insensitive).\n\n");
 				
-				continue;
+				return;
 			}
 
 			// Assume n == 2 in here since we are here

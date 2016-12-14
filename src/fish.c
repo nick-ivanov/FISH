@@ -87,7 +87,7 @@ int main()
 		}
 
 		if(!strcmp(A[0], "help")) {
-			
+			help(A, n);
 		}
 
 		if(!strcmp(A[0], "run")) {
