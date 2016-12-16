@@ -68,7 +68,7 @@ void help(char ** A, int n) {
 				printf("\tREMOVE <file>\n");
 				printf("EXAMPLE:\n");
 				printf("\tREMOVE foo.txt\n");
-				continue;
+				return;
 			}
 
 			if(!strcmp(A[1], "cd")) {
@@ -78,7 +78,7 @@ void help(char ** A, int n) {
 				printf("\tCD [<directory>]\n");
 				printf("EXAMPLE:\n");
 				printf("\tCD /bin\n");
-				continue;
+				return;
 			}
 
 			if(!strcmp(A[1], "show")) {
