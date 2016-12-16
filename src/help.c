@@ -59,7 +59,7 @@ void help(char ** A, int n) {
 				printf("\tCOPY <source-file> <destination-file-or-directory>\n");
 				printf("EXAMPLE:\n");
 				printf("\tCOPY foo.txt bar.txt\n");
-				continue;
+				return;
 			}
 
 			if(!strcmp(A[1], "remove")) {
