@@ -31,7 +31,7 @@ void help(char ** A, int n) {
 				printf("RUN <executable-filename> [<argument1> <argument2> .. <argument9>]\n");
 				printf("EXAMPLE:\n");
 				printf("\tRUN /bin/ls -l\n");
-				continue;
+				return;
 			}
 
 			if(!strcmp(A[1], "launch")) {
@@ -40,7 +40,7 @@ void help(char ** A, int n) {
 				printf("\tLAUNCH <program> [<argument1> <argument2> .. <argument9>]\n");
 				printf("EXAMPLE:\n");
 				printf("\tLAUNCH ls -l\n");
-				continue;
+				return;
 			}
 
 			if(!strcmp(A[1], "list")) {
@@ -50,7 +50,7 @@ void help(char ** A, int n) {
 				printf("\tLIST [<directory>]\n");
 				printf("EXAMPLE:\n");
 				printf("\tLIST /\n");
-				continue;
+				return;
 			}
 
 			if(!strcmp(A[1], "copy")) {
