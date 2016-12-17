@@ -87,7 +87,7 @@ void help(char ** A, int n) {
 				printf("\tSHOW <file>\n");
 				printf("EXAMPLE:\n");
 				printf("\tSHOW foo.txt\n");
-				continue;
+				return;
 			}
 
 			if(!strcmp(A[1], "help")) {
@@ -97,7 +97,7 @@ void help(char ** A, int n) {
 				printf("\tHELP [<fish-command>]\n");
 				printf("EXAMPLE:\n");
 				printf("\tHELP SHOW\n");
-				continue;
+				return;
 			}
 
 			if(!strcmp(A[1], "quit")) {
