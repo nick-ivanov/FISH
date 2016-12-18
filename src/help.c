@@ -104,7 +104,7 @@ void help(char ** A, int n) {
 				printf("QUIT exits FISH command interpreter.\n");
 				printf("FORMAT:\n");
 				printf("\tQUIT\n");
-				continue;
+				return;
 			}
 
 			if(!strcmp(A[1], "mkdir")) {
@@ -113,7 +113,7 @@ void help(char ** A, int n) {
 				printf("\tMKDIR <directory-name>\n");
 				printf("EXAMPLE:\n");
 				printf("\tMKDIR foobar\n");
-				continue;
+				return;
 			}
 
 			if(!strcmp(A[1], "rmdir")) {
@@ -122,9 +122,9 @@ void help(char ** A, int n) {
 				printf("\tRMDIR <directory-name>\n");
 				printf("EXAMPLE:\n");
 				printf("\tRMDIR foobar\n");
-				continue;
+				return;
 			}
 
 			fprintf(stderr, "FISH does not have command '%s'\n", A[1]);
-			continue;
+			return;
 }
