@@ -1,5 +1,7 @@
 // TODO: add header
 
+#include <stdio.h>
+
 #include "fish.h"
 
 void help(char ** A, int n) {
