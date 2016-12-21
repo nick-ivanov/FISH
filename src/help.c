@@ -1,6 +1,7 @@
 // TODO: add header
 
 #include <stdio.h>
+#include <help.h>
 
 #include "fish.h"
 
