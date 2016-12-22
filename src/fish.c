@@ -88,6 +88,7 @@ int main()
 
 		if(!strcmp(A[0], "help")) {
 			help(A, n);
+			continue;
 		}
 
 		if(!strcmp(A[0], "run")) {
