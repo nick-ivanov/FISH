@@ -54,3 +54,12 @@ void tolower_argvx(char** ARGV, int index);
 /* TODO: Function description */
 void help(char** A, int n);
 
+
+
+/* TODO: Function description */
+void help(char** A, int n);
+
+
+
+
+
