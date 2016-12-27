@@ -8,14 +8,14 @@
 void run(char ** A, int n) {
 	if(n < 2 || n > 10) {
 		fprintf(stderr, "FISH SYNTAX ERROR: Command RUN takes one to nine arguments.\n");
-		continue;
+		return;
 	}
 
 	pid_t pid = fork();
 
 	if(pid == -1) {
 		perror("FISH internal error.");
-		continue;
+		return;
 	} else if (pid == 0) {
 		switch(n) // Yes it looks gloomy, but it is easier than using execv()!
 		{
@@ -31,7 +31,7 @@ void run(char ** A, int n) {
 			
 			default:
 				fprintf(stderr, "FISH SYNTAX ERROR: Command RUN takes one to eleven arguments.\n");
-				continue;
+				return;
 		}
 
 		perror("FISH ERROR");
