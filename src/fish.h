@@ -1,18 +1,20 @@
 /*
-FILE NAME:     parse.h
-VERSION:       1.1
-DESCRIPTION:   Fantasticly Incredible Shell (FISH) -- pretty good Unux shell.
-AUTHOR:        Copyright (C) 2015-2016 Nikolay Ivanov (Nick) <nnrowan@gmail.com>
-LICENSE:       GNU General Public License v.3
-               [http://www.gnu.org/licenses/gpl-3.0.en.html]
+    Fantasticly Incredible Shell (FISH) -- a pretty good Unux shell
+    Copyright (C) 2015-2017  Nick Ivanov <nnrowan@gmail.com>
 
-DOCUMENTATION: Build and run the program; then type HELP to
-                     to see the list of commands:
-                     $ make
-                     $ ./fish
-                     [...] ><(((*> HELP
-*/
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
 
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this program.  If not, see <https://www.gnu.org/licenses/>.
+ */
 
 #define FISH_MAX_CMD_WORDS	64		// Maximum number of words in a command
 #define FISH_MAX_WORD_LEN	256		// Maximum length of a word
