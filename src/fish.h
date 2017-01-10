@@ -34,7 +34,6 @@ ARGUMENTS:
 
 RETURN VALUE: The number of words read.
 */
-
 int parse(char** A);
 
 
@@ -49,13 +48,11 @@ ARGUMENTS:
 	index:			the index of the string to process.
 RETURN VALUE: None
 */
-
 void tolower_argvx(char** ARGV, int index);
 
 
 /* TODO: Function description */
 void help(char** A, int n);
-
 
 
 /* TODO: Function description */

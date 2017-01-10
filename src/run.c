@@ -16,14 +16,14 @@
     along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
 
+#include "fish.h"
+
 #include <stdio.h>
 #include <string.h>
 #include <sys/types.h>
 #include <sys/wait.h>
 #include <unistd.h>
 #include <stdlib.h>
-
-#include "fish.h"
 
 void run(char ** A, int n) {
 	if(n < 2 || n > 10) {
