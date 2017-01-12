@@ -16,9 +16,9 @@
     along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
 
-#include <ctype.h>
-
 #include "fish.h"
+
+#include <ctype.h>
 
 void tolower_argvx(char** ARGV, int index)
 {
