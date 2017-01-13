@@ -58,6 +58,9 @@ void help(char** A, int n);
 /* TODO: Function description */
 void run(char** A, int n);
 
+/* TODO: Function description */
+void quit(char** A, int n);
+
 
 
 
