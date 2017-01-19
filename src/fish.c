@@ -79,13 +79,7 @@ int main()
 		tolower_argvx(A, 0);
 
 		if(!strcmp(A[0], "quit")) {
-			if(n > 1) {
-				fprintf(stderr, "FISH SYNTAX ERROR: QUIT does not take any arguments.\n");
-				continue;
-			}
-
-			printf("Thank you for using Fantastically Incredible Shell (FISH)!\n");
-			printf("Glub-glub!\n");
+			quit(A, n);
 			break;
 		}
 
