@@ -62,8 +62,12 @@ void run(char** A, int n);
 void quit(char** A, int n);
 
 
-/* TOD: Function description */
+/* TODO: Function description */
 void launch(char** A, int n);
+
+/* TODO: Function description */
+void list(char** A, int n);
+
 
 
 
