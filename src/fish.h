@@ -19,7 +19,6 @@
 #define FISH_MAX_CMD_WORDS	64		// Maximum number of words in a command
 #define FISH_MAX_WORD_LEN	256		// Maximum length of a word
 
-
 /* 
 This function reads a line from the keyboard and writes each
 word into an array of strings. The array and its resulting size
