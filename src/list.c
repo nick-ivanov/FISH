@@ -19,24 +19,30 @@
 #include "fish.h"
 
 void list(char** A, int n) {
-    DIR * dir;
-    struct dirent* entry;
+    if(n == 1) {
+        DIR * dir;
+        struct dirent* entry;
 
-    dir = opendir(getcwd(NULL, 256));
+        dir = opendir(getcwd(NULL, 256));
 
-    if(dir == NULL) {
-        perror("FISH ERROR");
+        if(dir == NULL) {
+            perror("FISH ERROR");
+            closedir(dir);
+            continue;
+        }
+
+        int i = 0;
+        while((entry = readdir(dir)) != NULL) {
+            printf("%s\n", entry->d_name);
+            i++;
+        }
+
+        printf("---\n");
+        printf("TOTAL: %d items.\n", i);
         closedir(dir);
-        continue;
     }
 
-    int i = 0;
-    while((entry = readdir(dir)) != NULL) {
-        printf("%s\n", entry->d_name);
-        i++;
+    if(n == 2) {
+        
     }
-
-    printf("---\n");
-    printf("TOTAL: %d items.\n", i);
-    closedir(dir);
 }
