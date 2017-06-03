@@ -43,6 +43,23 @@ void list(char** A, int n) {
     }
 
     if(n == 2) {
-        
+        DIR * dir;
+        struct dirent* entry;
+
+        dir = opendir(A[1]);
+        if(dir == NULL) {
+            perror("FISH ERROR");
+            closedir(dir);
+            continue;
+        }
+
+        int i = 0;
+        while((entry = readdir(dir)) != NULL) {
+            printf("%s\n", entry->d_name);
+            i++;
+        }
+        printf("---\n");
+        printf("TOTAL: %d items.\n", i);
+        closedir(dir);
     }
 }
