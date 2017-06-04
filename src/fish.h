@@ -67,6 +67,7 @@ void launch(char** A, int n);
 /* TODO: Function description */
 void list(char** A, int n);
 
-
+/* TODO: Function description */
+void copy(char** A, int n);
 
 
