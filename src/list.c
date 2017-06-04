@@ -40,9 +40,7 @@ void list(char** A, int n) {
         printf("---\n");
         printf("TOTAL: %d items.\n", i);
         closedir(dir);
-    }
-
-    if(n == 2) {
+    } else if(n == 2) {
         DIR * dir;
         struct dirent* entry;
 
@@ -61,5 +59,7 @@ void list(char** A, int n) {
         printf("---\n");
         printf("TOTAL: %d items.\n", i);
         closedir(dir);
+    } else {
+        fprintf(stderr, "FISH SYNTAX ERROR: LIST can only take one or no arguments.\n");
     }
 }
