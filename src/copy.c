@@ -22,14 +22,14 @@
 void copy(char** A, int n) {
     if(n != 3) {
         fprintf(stderr, "FISH SYNTAX ERROR: COPY can take only two arguments.\n");
-        continue;
+        return;
     }
 
     FILE * f1 = fopen(A[1], "r");
 
     if(f1 == NULL) {
         fprintf(stderr, "FISH: File %s does not exist or cannot be copied.\n", A[1]);
-        continue;
+        return;
     }
 
     // Allow to copy to a directory
@@ -55,7 +55,7 @@ void copy(char** A, int n) {
             // Without GOTO, we have to check the same condition twice. Not a big problem though :)
             if(i == FISH_MAX_WORD_LEN) {
                 fprintf(stderr, "FISH ERROR: File name is too long.\n");
-                continue;
+                return;
             }
 
             A[2][i] = '\0'; // It is still a C-string.
@@ -67,7 +67,7 @@ void copy(char** A, int n) {
     if(f2 == NULL) {
         fprintf(stderr, "FISH: Cannot copy.\n");
         fclose(f1);
-        continue;
+        return;
     }
 
     char ch;
