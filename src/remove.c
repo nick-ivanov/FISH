@@ -19,14 +19,14 @@
 #include "fish.h"
 
 void remove(char** A, int n) {
-                if(n != 2) {
-                fprintf(stderr, "FISH ERROR: REMOVE command requires one argument.\n");
-                continue;
-            }
+    if(n != 2) {
+        fprintf(stderr, "FISH ERROR: REMOVE command requires one argument.\n");
+        return;
+    }
 
-            if(unlink(A[1]) == -1) {
-                fprintf(stderr, "FISH ERROR: File %s cannot be removed.\n", A[1]);
-            } else {
-                fprintf(stderr, "R.I.P., %s\n", A[1]);
-            }
+    if(unlink(A[1]) == -1) {
+        fprintf(stderr, "FISH ERROR: File %s cannot be removed.\n", A[1]);
+    } else {
+        fprintf(stderr, "R.I.P., %s\n", A[1]);
+    }
 }
