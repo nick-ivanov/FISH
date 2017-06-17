@@ -28,7 +28,7 @@ void list(char** A, int n) {
         if(dir == NULL) {
             perror("FISH ERROR");
             closedir(dir);
-            continue;
+            return;
         }
 
         int i = 0;
@@ -48,7 +48,7 @@ void list(char** A, int n) {
         if(dir == NULL) {
             perror("FISH ERROR");
             closedir(dir);
-            continue;
+            return;
         }
 
         int i = 0;
