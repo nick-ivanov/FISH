@@ -19,7 +19,7 @@
 void quit(char** A, int n) {
     if(n > 1) {
         fprintf(stderr, "FISH SYNTAX ERROR: QUIT does not take any arguments.\n");
-        continue;
+        return;
     }
 
     printf("Thank you for using Fantastically Incredible Shell (FISH)!\n");
