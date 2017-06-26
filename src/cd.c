@@ -18,3 +18,6 @@
 
 #include "fish.h"
 
+void cd(char** A, int n) {
+    
+}
