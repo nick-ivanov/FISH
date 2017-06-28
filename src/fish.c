@@ -114,19 +114,7 @@ int main()
 		}
 
 		if(!strcmp(A[0], "cd")) {
-			if(n > 2) {
-				fprintf(stderr, "FISH ERROR: REMOVE command requires one or no argument.\n");
-				continue;
-			}
-
-			if(n == 1) {
-				A[1] = getenv("HOME");
-			}
-
-			if(chdir(A[1]) == -1) {
-				fprintf(stderr, "FISH ERROR: Cannot change directory.\n");
-			}
-
+			cd(A, n);
 			continue;
 		}
 
