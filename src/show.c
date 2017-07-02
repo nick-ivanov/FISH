@@ -18,3 +18,6 @@
 
 #include "fish.h"
 
+void show(char** A, int n) {
+    
+}
