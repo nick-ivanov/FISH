@@ -119,29 +119,7 @@ int main()
 		}
 
 		if(!strcmp(A[0], "show")) {
-			if(n != 2) {
-				fprintf(stderr, "FISH SYNTAX ERROR: SHOW command requires one argument.\n");
-				continue;
-			}
-
-			
-			FILE * f = fopen(A[1], "r");
-			
-			if(f == NULL) {
-				fprintf(stderr, "FISH ERROR: Cannot open file %s\n", A[1]);;
-				continue;
-			}
-
-			char ch = 0;
-			while(ch != EOF) { 
-				ch = fgetc(f);
-				if(ch != EOF) {
-					printf("%c", ch);
-				}
-			}
-
-			fclose(f);
-			
+			show(A, n);
 			continue;
 		}
 
