@@ -21,7 +21,7 @@
 void show(char** A, int n) {
     if(n != 2) {
         fprintf(stderr, "FISH SYNTAX ERROR: SHOW command requires one argument.\n");
-        continue;
+        return;
     }
 
     
@@ -29,7 +29,7 @@ void show(char** A, int n) {
     
     if(f == NULL) {
         fprintf(stderr, "FISH ERROR: Cannot open file %s\n", A[1]);;
-        continue;
+        return;
     }
 
     char ch = 0;
