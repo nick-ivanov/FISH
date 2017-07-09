@@ -39,5 +39,8 @@ remove.o: remove.c
 cd.o: cd.c
 	$(CC) -c cd.c
 
+show.o: show.c
+	$(CC) -c show.c	
+
 clean:
 	rm -f *.o fish

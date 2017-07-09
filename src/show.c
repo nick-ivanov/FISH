@@ -24,7 +24,6 @@ void show(char** A, int n) {
         return;
     }
 
-    
     FILE * f = fopen(A[1], "r");
     
     if(f == NULL) {
