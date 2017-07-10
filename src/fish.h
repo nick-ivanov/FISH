@@ -79,3 +79,6 @@ void cd(char** A, int n);
 /* TODO: Function description */
 void show(char** A, int n);
 
+/* TODO: Function description */
+void mkdir(char** A, int n);
+
