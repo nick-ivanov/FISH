@@ -124,17 +124,7 @@ int main()
 		}
 
 		if(!strcmp(A[0], "mkdir")) {
-			if(n != 2) {
-				fprintf(stderr, "FISH SYNTAX ERROR: MKDIR takes one argument.\n");
-				continue;
-			}
-
-			if(mkdir(A[1], 0755) == -1) {
-				fprintf(stderr, "FISH ERROR: Cannot create a directory.\n");
-			} else {
-				printf("Welcome on board, %s!\n", A[1]);
-			}
-
+			mkdir(A, n);
 			continue;
 		}
 
