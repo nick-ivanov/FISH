@@ -42,5 +42,8 @@ cd.o: cd.c
 show.o: show.c
 	$(CC) -c show.c	
 
+mkdir.o: mkdir.c
+	$(CC) -c mkdir.c
+
 clean:
 	rm -f *.o fish
