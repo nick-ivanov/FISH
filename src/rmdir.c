@@ -17,5 +17,15 @@
  */
 
 void rmdir(char** A, int n) {
-    
+            if(n != 2) {
+                fprintf(stderr, "FISH SYNTAX ERROR: RMDIR takes one argument.\n");
+                continue;
+            }
+
+            if(rmdir(A[1]) == -1) {
+                fprintf(stderr, "FISH ERROR: Cannot delete a directory.\n");
+            } else {
+                fprintf(stderr, "R.I.P., %s/\n", A[1]);
+            }
+
 }
