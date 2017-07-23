@@ -1,7 +1,7 @@
 # Makefile for FISH
 
 CC = gcc
-OBJS = fish.o parse.o tolower_argvx.o help.o run.o quit.o launch.o list.o copy.o remove.o cd.o
+OBJS = fish.o parse.o tolower_argvx.o help.o run.o quit.o launch.o list.o copy.o remove.o cd.o show.o mkdir.o rmdir.o
 
 fish: $(OBJS)
 	$(CC) -o fish $(OBJS)
@@ -44,6 +44,9 @@ show.o: show.c
 
 mkdir.o: mkdir.c
 	$(CC) -c mkdir.c
+
+rmdir.o: rmdir.c
+	$(CC) -c rmdir.c
 
 clean:
 	rm -f *.o fish
