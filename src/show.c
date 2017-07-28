@@ -27,7 +27,7 @@ void show(char** A, int n) {
     FILE * f = fopen(A[1], "r");
     
     if(f == NULL) {
-        fprintf(stderr, "FISH ERROR: Cannot open file %s\n", A[1]);;
+        fprintf(stderr, "FISH ERROR: Cannot open file %s\n", A[1]);
         return;
     }
 
