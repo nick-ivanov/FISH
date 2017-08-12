@@ -18,7 +18,7 @@
 
 #include "fish.h"
 
-void show(char** A, int n) {
+void fish_show(char** A, int n) {
     if(n != 2) {
         fprintf(stderr, "FISH SYNTAX ERROR: SHOW command requires one argument.\n");
         return;
