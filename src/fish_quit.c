@@ -16,7 +16,7 @@
     along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
 
-void quit(char** A, int n) {
+void fish_quit(char** A, int n) {
     if(n > 1) {
         fprintf(stderr, "FISH SYNTAX ERROR: QUIT does not take any arguments.\n");
         return;
