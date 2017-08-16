@@ -16,7 +16,7 @@
     along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
 
-void launch(char** A, int n) {
+void fish_launch(char** A, int n) {
     if(n < 2 || n > 10) {
                 fprintf(stderr, "FISH SYNTAX ERROR: Command LAUNCH takes one to nine arguments.\n");
                 return;
