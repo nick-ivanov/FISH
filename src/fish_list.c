@@ -18,7 +18,7 @@
 
 #include "fish.h"
 
-void list(char** A, int n) {
+void fish_list(char** A, int n) {
     if(n == 1) {
         DIR * dir;
         struct dirent* entry;
