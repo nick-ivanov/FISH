@@ -16,7 +16,7 @@
     along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
 
-void mkdir(char** A, int n) {
+void fish_mkdir(char** A, int n) {
     if(n != 2) {
         fprintf(stderr, "FISH SYNTAX ERROR: MKDIR takes one argument.\n");
         return;
