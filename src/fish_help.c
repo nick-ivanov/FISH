@@ -21,7 +21,7 @@
 #include <stdio.h>
 #include <string.h>
 
-void help(char ** A, int n) {
+void fish_help(char ** A, int n) {
 	if(n > 2) {
 				fprintf(stderr, "FISH SYNTAX ERROR: HELP takes one or no arguments.\n");
 				return;
