@@ -19,7 +19,7 @@
 #include "fish.h"
 
 
-void copy(char** A, int n) {
+void fish_copy(char** A, int n) {
     if(n != 3) {
         fprintf(stderr, "FISH SYNTAX ERROR: COPY can take only two arguments.\n");
         return;

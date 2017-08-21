@@ -18,7 +18,7 @@
 
 #include "fish.h"
 
-void cd(char** A, int n) {
+void fish_cd(char** A, int n) {
     if(n > 2) {
         fprintf(stderr, "FISH ERROR: REMOVE command requires one or no argument.\n");
         return;
