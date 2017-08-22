@@ -51,39 +51,39 @@ void fish_tolower_argvx(char** ARGV, int index);
 
 
 /* TODO: Function description */
-void help(char** A, int n);
+void fish_help(char** A, int n);
 
 
 /* TODO: Function description */
-void run(char** A, int n);
+void fish_run(char** A, int n);
 
 /* TODO: Function description */
-void quit(char** A, int n);
+void fish_quit(char** A, int n);
 
 
 /* TODO: Function description */
-void launch(char** A, int n);
+void fish_launch(char** A, int n);
 
 /* TODO: Function description */
-void list(char** A, int n);
+void fish_list(char** A, int n);
 
 /* TODO: Function description */
-void copy(char** A, int n);
+void fish_copy(char** A, int n);
 
 /* TODO: Function description */
-void remove(char** A, int n);
+void fish_remove(char** A, int n);
 
 /* TODO: Function description */
-void cd(char** A, int n);
+void fish_cd(char** A, int n);
 
 /* TODO: Function description */
-void show(char** A, int n);
+void fish_show(char** A, int n);
 
 /* TODO: Function description */
-void mkdir(char** A, int n);
+void fish_mkdir(char** A, int n);
 
 /* TODO: Function description */
-void rmdir(char** A, int n);
+void fish_rmdir(char** A, int n);
 
 
 
