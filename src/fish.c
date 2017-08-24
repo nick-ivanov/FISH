@@ -61,7 +61,7 @@ int main()
 			A[i][0] = '\0';
 		} 
 		
-		n = parse(A);
+		n = fish_parse(A);
 
 		if(n == -1) {	// Check the boundaries
 			fprintf(stderr, "FISH ERROR: The number of words cannot exceed %d.\n",
@@ -76,60 +76,60 @@ int main()
 		}
 		
 		// Make commands case insensitve. Arguments remain case-sensitive though.
-		tolower_argvx(A, 0);
+		fish_tolower_argvx(A, 0);
 
 		if(!strcmp(A[0], "quit")) {
-			quit(A, n);
+			fish_quit(A, n);
 			break;
 		}
 
 		if(!strcmp(A[0], "help")) {
-			help(A, n);
+			fish_help(A, n);
 			continue;
 		}
 
 		if(!strcmp(A[0], "run")) {
-			run(A, n);
+			fish_run(A, n);
 			continue;
 		}
 
 		if(!strcmp(A[0], "launch")) {
-			launch(A, n);
+			fish_launch(A, n);
 			continue;
 		}
 
 		if(!strcmp(A[0], "list")) {
-			list(A, n);
+			fish_list(A, n);
 			continue;
 		}
 
 		if(!strcmp(A[0], "copy")) {
-			copy(A, n);
+			fish_copy(A, n);
 			continue;
 		}
 
 		if(!strcmp(A[0], "remove")) {
-			remove(A, n);
+			fish_remove(A, n);
 			continue;
 		}
 
 		if(!strcmp(A[0], "cd")) {
-			cd(A, n);
+			fish_cd(A, n);
 			continue;
 		}
 
 		if(!strcmp(A[0], "show")) {
-			show(A, n);
+			fish_show(A, n);
 			continue;
 		}
 
 		if(!strcmp(A[0], "mkdir")) {
-			mkdir(A, n);
+			fish_mkdir(A, n);
 			continue;
 		}
 
 		if(!strcmp(A[0], "rmdir")) {
-			rmdir(A, n);
+			fish_rmdir(A, n);
 			continue;
 		}
 
