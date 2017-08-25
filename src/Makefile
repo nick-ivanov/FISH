@@ -21,7 +21,7 @@ fish_help.o: fish_help.c
 fish_run.o: fish_run.c
 	$(CC) -c fish_run.c
 
-fish_quit.o: fish_quic.c
+fish_quit.o: fish_quit.c
 	$(CC) -c fish_quit.c
 
 fish_launch.o: fish_launch.c
