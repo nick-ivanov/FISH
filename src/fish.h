@@ -50,7 +50,7 @@ RETURN VALUE: None
 void fish_tolower_argvx(char** ARGV, int index);
 
 /* TODO: Function description */
-void fish_parse(char** A, int n);
+int fish_parse(char** A, int n);
 
 /* TODO: Function description */
 void fish_help(char** A, int n);
