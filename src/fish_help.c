@@ -42,7 +42,7 @@ void fish_help(char ** A, int n) {
 
 			// Assume n == 2 in here since we are here
 
-			tolower_argvx(A, 1);	// Lowercase the argument
+			fish_tolower_argvx(A, 1);	// Lowercase the argument
 
 			if(!strcmp(A[1], "run")) {
 				printf("RUN executes a program using its filename.\n");
