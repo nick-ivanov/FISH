@@ -17,7 +17,7 @@
  */
 
 #include <stdio.h>
-#include <unitsd.h>
+#include <unistd.h>
 
 #include "fish.h"
 
