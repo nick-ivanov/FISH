@@ -20,6 +20,7 @@
 #include <unistd.h>
 #include <stdlib.h>
 #include <sys/dir.h>
+#include <sys/stat.h>
 
 #include "fish.h"
 
