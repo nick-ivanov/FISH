@@ -16,6 +16,10 @@
     along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
 
+#include <stdio.h>
+
+#include "fish.h"
+
 void fish_rmdir(char** A, int n) {
     if(n != 2) {
         fprintf(stderr, "FISH SYNTAX ERROR: RMDIR takes one argument.\n");
