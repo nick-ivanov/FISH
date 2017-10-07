@@ -18,6 +18,7 @@
 
 #include <stdio.h>
 #include <sys/stat.h>
+#include <stdlib.h>
 
 #include "fish.h"
 
