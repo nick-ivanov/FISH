@@ -37,17 +37,19 @@ int parse(char** A);
 
 
 
-/*
-This function converts capital letter in ARGV[index] into lower case.
-This function is used for support of case-insensitive commands, as well
-as case-insensitive arguments of HELP command.
+/****************************************************************************
+PURPOSE: Convert capital letters in ARGV[index] into lowercase.
 
 ARGUMENTS:
-	ARGV:			array of C-strings;
-	index:			the index of the string to process.
+	- ARGV: array of C-strings;
+	- index: position (index) of the string in ARGV to convert to lowercase.
+
 RETURN VALUE: None
 */
 void fish_tolower_argvx(char** ARGV, int index);
+/***************************************************************************/
+
+
 
 /* TODO: Function description */
 int fish_parse(char** A);
