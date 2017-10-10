@@ -52,7 +52,7 @@ void fish_tolower_argvx(char** ARGV, int index);
 
 
 /* TODO: Function description */
-int fish_parse(char** A);
+int fish_readcommand(char** A);
 
 /* TODO: Function description */
 void fish_help(char** A, int n);

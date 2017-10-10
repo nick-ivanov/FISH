@@ -61,7 +61,7 @@ int main()
 			A[i][0] = '\0';
 		} 
 		
-		n = fish_parse(A);
+		n = fish_readcommand(A);
 
 		if(n == -1) {	// Check the boundaries
 			fprintf(stderr, "FISH ERROR: The number of words cannot exceed %d.\n",

@@ -20,7 +20,7 @@
 
 #include <stdio.h>
 
-int fish_parse(char** A)
+int fish_readcommand(char** A)
 {
 	char ch;
 	int i = 0;
