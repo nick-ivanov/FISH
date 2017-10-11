@@ -1,7 +1,7 @@
 # Makefile for FISH
 
 CC = gcc
-OBJS = fish.o fish_parse.o fish_tolower_argvx.o fish_help.o fish_run.o fish_quit.o fish_launch.o fish_list.o fish_copy.o fish_remove.o fish_cd.o fish_show.o fish_mkdir.o fish_rmdir.o
+OBJS = fish.o fish_readcommand.o fish_tolower_argvx.o fish_help.o fish_run.o fish_quit.o fish_launch.o fish_list.o fish_copy.o fish_remove.o fish_cd.o fish_show.o fish_mkdir.o fish_rmdir.o
 
 fish: $(OBJS)
 	$(CC) -o fish $(OBJS)
@@ -9,8 +9,8 @@ fish: $(OBJS)
 fish.o: fish.c
 	$(CC) -c fish.c
 
-fish_parse.o: fish_parse.c
-	$(CC) -c fish_parse.c
+fish_readcommand.o: fish_readcommand.c
+	$(CC) -c fish_readcommand.c
 
 fish_tolower_argvx.o: fish_tolower_argvx.c
 	$(CC) -c fish_tolower_argvx.c
