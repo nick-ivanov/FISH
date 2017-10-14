@@ -51,8 +51,22 @@ void fish_tolower_argvx(char** ARGV, int index);
 
 
 
-/* TODO: Function description */
+
+/****************************************************************************
+PURPOSE: Read user command from standard input, split it into words, and
+	put the result into the array A.
+
+ARGUMENTS:
+	- A: array of C-strings (two-dimentional array of chars) where the
+		result will be written into.
+
+RETURN VALUE: The number of strings put in A.
+*/
 int fish_readcommand(char** A);
+/***************************************************************************/
+
+
+
 
 /* TODO: Function description */
 void fish_help(char** A, int n);
