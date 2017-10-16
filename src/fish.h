@@ -67,8 +67,18 @@ void fish_help(char** A, int n);
 
 
 
-/* TODO: Function description */
+/****************************************************************************
+PURPOSE: Run an executable using a direct path to its executable file.
+
+ARGUMENTS:
+	- A: array of C-strings containing FISH command and its arguments;
+	- n: number of words in array A.
+
+RETURN VALUE: None
+*/
 void fish_run(char** A, int n);
+/***************************************************************************/
+
 
 /* TODO: Function description */
 void fish_quit(char** A, int n);
