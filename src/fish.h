@@ -80,8 +80,21 @@ void fish_run(char** A, int n);
 /***************************************************************************/
 
 
-/* TODO: Function description */
+
+
+/****************************************************************************
+PURPOSE: Quit FISH with return code 0.
+
+ARGUMENTS:
+	- A: array of C-strings containing FISH command and its arguments;
+	- n: number of words in array A.
+
+RETURN VALUE: None
+*/
 void fish_quit(char** A, int n);
+/***************************************************************************/
+
+
 
 
 /* TODO: Function description */
