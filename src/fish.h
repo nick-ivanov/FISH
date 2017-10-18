@@ -97,8 +97,21 @@ void fish_quit(char** A, int n);
 
 
 
-/* TODO: Function description */
+/****************************************************************************
+PURPOSE: Execute a program by searching its executable in the PATH-listed
+	directories.
+
+ARGUMENTS:
+	- A: array of C-strings containing FISH command and its arguments;
+	- n: number of words in array A.
+
+RETURN VALUE: None
+*/
 void fish_launch(char** A, int n);
+/***************************************************************************/
+
+
+
 
 /* TODO: Function description */
 void fish_list(char** A, int n);
