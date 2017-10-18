@@ -113,8 +113,21 @@ void fish_launch(char** A, int n);
 
 
 
-/* TODO: Function description */
+/****************************************************************************
+PURPOSE: List the contents of the current directory or the directory
+	specified by the argument.
+
+ARGUMENTS:
+	- A: array of C-strings containing FISH command and its arguments;
+	- n: number of words in array A.
+
+RETURN VALUE: None
+*/
 void fish_list(char** A, int n);
+/***************************************************************************/
+
+
+
 
 /* TODO: Function description */
 void fish_copy(char** A, int n);
