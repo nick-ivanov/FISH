@@ -145,8 +145,20 @@ void fish_copy(char** A, int n);
 
 
 
-/* TODO: Function description */
+/****************************************************************************
+PURPOSE: Remove the file specified by the argument.
+
+ARGUMENTS:
+	- A: array of C-strings containing FISH command and its arguments;
+	- n: number of words in array A.
+
+RETURN VALUE: None
+*/
 void fish_remove(char** A, int n);
+/***************************************************************************/
+
+
+
 
 /* TODO: Function description */
 void fish_cd(char** A, int n);
