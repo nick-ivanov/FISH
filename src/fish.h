@@ -160,8 +160,21 @@ void fish_remove(char** A, int n);
 
 
 
-/* TODO: Function description */
+/****************************************************************************
+PURPOSE: Change current directory into the one specified by the argument.
+
+ARGUMENTS:
+	- A: array of C-strings containing FISH command and its arguments;
+	- n: number of words in array A.
+
+RETURN VALUE: None
+*/
 void fish_cd(char** A, int n);
+/***************************************************************************/
+
+
+
+
 
 /* TODO: Function description */
 void fish_show(char** A, int n);
