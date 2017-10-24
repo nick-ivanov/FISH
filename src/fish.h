@@ -175,9 +175,21 @@ void fish_cd(char** A, int n);
 
 
 
+/****************************************************************************
+PURPOSE: Show the contents of the file specified by the argument.
 
-/* TODO: Function description */
+ARGUMENTS:
+	- A: array of C-strings containing FISH command and its arguments;
+	- n: number of words in array A.
+
+RETURN VALUE: None
+*/
 void fish_show(char** A, int n);
+/***************************************************************************/
+
+
+
+
 
 /* TODO: Function description */
 void fish_mkdir(char** A, int n);
