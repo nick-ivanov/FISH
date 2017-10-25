@@ -205,8 +205,17 @@ void fish_mkdir(char** A, int n);
 
 
 
-/* TODO: Function description */
+/****************************************************************************
+PURPOSE: Remove an empty directory specified by the argument.
+
+ARGUMENTS:
+	- A: array of C-strings containing FISH command and its arguments;
+	- n: number of words in array A.
+
+RETURN VALUE: None
+*/
 void fish_rmdir(char** A, int n);
+/***************************************************************************/
 
 
 
