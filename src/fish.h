@@ -190,9 +190,20 @@ void fish_show(char** A, int n);
 
 
 
+/****************************************************************************
+PURPOSE: Create a directory specified by the argument.
 
-/* TODO: Function description */
+ARGUMENTS:
+	- A: array of C-strings containing FISH command and its arguments;
+	- n: number of words in array A.
+
+RETURN VALUE: None
+*/
 void fish_mkdir(char** A, int n);
+/***************************************************************************/
+
+
+
 
 /* TODO: Function description */
 void fish_rmdir(char** A, int n);
